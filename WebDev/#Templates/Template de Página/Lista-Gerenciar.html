@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+<title>Loja Modelo</title>
+<vtex:metaTags/>
+<vtex:template id="scripts" />
+
+
+<!--  SubTemplate: pngIeFix -->
+<vtex:template id="pngIeFix" />
+<!-- /SubTemplate: pngIeFix -->
+
+</head>
+
+<body>
+
+<!--  SubTemplate: topBar -->
+<vtex:template id="topBar" />
+<!-- /SubTemplate: topBar -->
+
+<vtex:template id="header" />
+
+<div id="wrapProdutosMenu">
+	<div id="banner_dormitorios" class="banners_menu"><vtex:contentPlaceHolder id="banner_dormitorios" /></div>
+	<div id="banner_sala_de_estar" class="banners_menu"><vtex:contentPlaceHolder id="banner_sala_de_estar" /></div>
+	<div id="banner_cozinha_e_jantar" class="banners_menu"><vtex:contentPlaceHolder id="banner_cozinha_e_jantar" /></div>
+	<div id="banner_escritorios" class="banners_menu"><vtex:contentPlaceHolder id="banner_escritorios" /></div>
+	<div id="banner_decoracao" class="banners_menu"><vtex:contentPlaceHolder id="banner_decoracao" /></div>
+	<div id="banner_jardim_e_lazer" class="banners_menu"><vtex:contentPlaceHolder id="banner_jardim_e_lazer" /></div>
+	<div id="banner_moveis_sustentaveis" class="banners_menu"><vtex:contentPlaceHolder id="banner_moveis_sustentaveis" /></div>
+</div>
+
+<div id="wrapProdutosMenu">
+    <div id="banner_sala_de_estar" class="banners_menu"><vtex:contentPlaceHolder id="banner_sala_de_estar" /></div>
+</div>
+
+<div id="all">		
+	<!--  SubTemplate: listsSideBar -->
+	<vtex:template id="listsSideBar" />
+	<!-- /SubTemplate: listsSideBar -->
+	
+	<div id="content">
+		<h2 class="titulo-sessao">Gerenciar listas</h2>
+		
+		<!--  Controle: gerenciar listas -->
+		<vtex.cmc:giftListManager />
+		<!-- /Controle: gerenciar listas -->
+	</div>
+	
+</div>	
+
+<!--  SubTemplate: footer -->
+<vtex:template id="footer" />
+<!-- /SubTemplate: footer -->
+
+</body>
+</html>

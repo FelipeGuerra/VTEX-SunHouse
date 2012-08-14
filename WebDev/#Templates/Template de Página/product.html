@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+<title>Loja Modelo</title>
+<vtex:metaTags/>
+
+<vtex:template id="scripts" />
+
+<link rel="stylesheet" type="text/css" href="~/arquivos/product.css" />
+<link rel="stylesheet" type="text/css" href="~/arquivos/thickbox.css" />
+<vtex:template id="pngIeFix" />
+</head>
+
+<body id="produto">
+
+<!--  SubTemplate: topBar -->
+<vtex:template id="topBar" />
+<!-- /SubTemplate: topBar -->
+<!--  SubTemplate: header -->
+<vtex:template id="header" />
+<!-- /SubTemplate: header -->
+
+<div id="wrapProdutosMenu">
+    <div id="banner_dormitorios" class="banners_menu"><vtex:contentPlaceHolder id="banner_dormitorios" /></div>
+	<div id="banner_sala_de_estar" class="banners_menu"><vtex:contentPlaceHolder id="banner_sala_de_estar" /></div>
+	<div id="banner_cozinha_e_jantar" class="banners_menu"><vtex:contentPlaceHolder id="banner_cozinha_e_jantar" /></div>
+	<div id="banner_escritorios" class="banners_menu"><vtex:contentPlaceHolder id="banner_escritorios" /></div>
+	<div id="banner_decoracao" class="banners_menu"><vtex:contentPlaceHolder id="banner_decoracao" /></div>
+	<div id="banner_jardim_e_lazer" class="banners_menu"><vtex:contentPlaceHolder id="banner_jardim_e_lazer" /></div>
+	<div id="banner_moveis_sustentaveis" class="banners_menu"><vtex:contentPlaceHolder id="banner_moveis_sustentaveis" /></div>
+</div>
+
+<div id="all">
+
+	
+	<div id="sideBar">
+		<!--  Controle: imagem do produto -->
+		<vtex.cmc:ProductImage />
+		<!-- /Controle: imagem do produto -->
+	</div>
+	
+	<div id="content">
+		<!--  Controle: nome do produto -->
+		<h1><vtex.cmc:productName /></h1>
+		<!-- /Controle: nome do produto -->
+		
+		<!--  Controle: botao comprar -->
+		<vtex.cmc:BuyButton />
+		<!-- /Controle: botao comprar -->
+		
+		<!--  Controle: breve descricao do produto -->
+		<vtex.cmc:productDescriptionShort />
+		<!-- /Controle: breve descricao do produto -->
+		
+		<!--  Controle: flags -->
+		<div id="flags"><vtex.cmc:hightLight /></div>
+		<!-- /Controle: flags -->
+		
+		<!--  Controle: seletor de sku -->
+                <vtex.cmc:stockKeepingUnitSelection />
+		<!-- /Controle: seletor de sku -->
+
+		<!--  Controle: preco do produto -->
+		<div id="productPrice"><vtex.cmc:skuPrice /></div>
+		<!-- /Controle: preco do produto -->
+		
+		<!--  Controle: formas de pagamento -->
+		<div id="productPayment"><vtex.cmc:OtherPaymentMethod/></div>
+		<!-- /Controle: formas de pagamento -->
+		
+		<!--  Controle: calcular frete -->
+		<vtex.cmc:shippingValue />
+		<!-- /Controle: calcular frete -->
+		
+		<!--  Controle: lista -->
+		<div id="productList" class="toRight"><vtex.cmc:giftListInsertSku /></div>
+		<!-- /Controle: lista -->
+
+		<!--  Controle: indicar a amigo -->
+		<div id="productRefer" class="toRight"><vtex.cmc:referAFriend /></div>
+		<!-- /Controle: indicar a amigo -->
+		
+		<!--  Controle: disponibilidade -->
+		<vtex.cmc:Delivery />
+		<!-- /Controle: disponibilidade -->
+		
+		<!--  Controle: servicos -->
+		<vtex.cmc:stockKeepingUnitService />
+		<!-- /Controle: servicos -->
+		
+		<!--  Controle: descricao do produto -->
+		<div id="productDescription">
+			<h2 class="title">Descrição do Produto</h2>
+			<vtex.cmc:ProductDescription />
+		</div>
+		<!-- /Controle: descricao do produto -->
+
+		<!--  Controle: especificacao do produto -->
+		<vtex.cmc:productSpecification />
+		<!-- /Controle: especificacao do produto -->
+		
+		<!--  Controle: compre junto -->
+		<vtex.cmc:BuyTogether/>
+		<!-- /Controle: compre junto -->
+		
+		<div id="collections" class="vitrine">
+			<!--  placeholders -->
+			<vtex:contentPlaceHolder id="PHrecomendamos" />
+			<vtex:contentPlaceHolder id="PHrelacionados" />
+			<!-- /placeholders -->
+		</div>
+
+		<!--  Controle: avaliacao do cliente -->
+		<vtex.cmc:UserReview />
+		<!-- /Controle: avaliacao do cliente -->
+	</div>
+
+	
+</div>
+
+<!--  SubTemplate: footer -->
+<vtex:template id="footer" />
+<!-- /SubTemplate: footer -->
+
+</body>
+</html>

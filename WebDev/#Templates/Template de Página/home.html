@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+<title>Loja Modelo</title>
+<vtex:metaTags/>
+<vtex:template id="scripts" />
+
+
+<!--  SubTemplate: pngIeFix -->
+<vtex:template id="pngIeFix" />
+<!-- /SubTemplate: pngIeFix -->
+
+</head>
+
+<body>
+
+<!--  SubTemplate: topBar -->
+<vtex:template id="topBar" />
+<!-- /SubTemplate: topBar -->
+
+<vtex:template id="header" />
+
+	<div id="wrapProdutosMenu">
+		<div id="banner_dormitorios" class="banners_menu"><vtex:contentPlaceHolder id="banner_dormitorios" /></div>
+		<div id="banner_sala_de_estar" class="banners_menu"><vtex:contentPlaceHolder id="banner_sala_de_estar" /></div>
+		<div id="banner_cozinha_e_jantar" class="banners_menu"><vtex:contentPlaceHolder id="banner_cozinha_e_jantar" /></div>
+		<div id="banner_escritorios" class="banners_menu"><vtex:contentPlaceHolder id="banner_escritorios" /></div>
+		<div id="banner_decoracao" class="banners_menu"><vtex:contentPlaceHolder id="banner_decoracao" /></div>
+		<div id="banner_jardim_e_lazer" class="banners_menu"><vtex:contentPlaceHolder id="banner_jardim_e_lazer" /></div>
+		<div id="banner_moveis_sustentaveis" class="banners_menu"><vtex:contentPlaceHolder id="banner_moveis_sustentaveis" /></div>
+	</div>
+
+	<div id="wrap_top_banners">
+		<div id="banner_destques">
+			<vtex:contentPlaceHolder id="BannerDestaques" />
+		</div>
+
+		<div id="topBanners">
+			<!--  placeholders -->
+			<div id="banner_prev"></div>
+			<div id="banner_next"></div>
+			<div id="banner1"><vtex:contentPlaceHolder id="PHbanner1" /></div>
+			<div id="banner2"><vtex:contentPlaceHolder id="PHbanner2" /></div>
+			<div id="banner3"><vtex:contentPlaceHolder id="PHbanner3" /></div>
+			<!-- /placeholders -->
+			<div id="mask_banner_principal"></div>
+		</div>
+		
+	</div>
+	
+	<div id="wrap_vitrine_title">
+		<h3>Ofertas do Dia:</h3>
+	</div>
+	<div class="wrap_vitrine_home carousel">
+		<div class="collectionWrap"><vtex:contentPlaceHolder id="PHcollection1" /></div>			
+	</div>
+	
+	<div id="wrap_vitrine_title">
+		<h3>Em Destaque:</h3>
+	</div>
+	<div class="wrap_vitrine_home carousel">
+		<div class="collectionWrap"><vtex:contentPlaceHolder id="PHcollection2" /></div>			
+	</div>
+	
+	<div id="wrap_vitrine_title">
+		<h3>Mais Procurados:</h3>
+	</div>
+	<div class="wrap_vitrine_home">			
+		<div class="collectionWrap"><vtex:contentPlaceHolder id="PHcollection3" /></div>			
+	</div>
+	
+	
+	<!-- AMBIENTES -->
+	
+	
+	<div id="wrap_vitrine_title">
+		<h3>Inspiração! Ambientes Completos<span></span><p>Veja os produtos que fazem parte desse ambiente</p></h3>
+	</div>
+	<div class="wrap_vitrine_home ambientes">			
+		<div class="collectionWrap">
+			<div id="wrapAmbientes">
+				
+				<div class="box">
+					<div class="content">
+						<div class="tab">
+							<div id="ambiente_um">
+								<div id="img_principal">
+									<vtex:contentPlaceHolder id="PHAmbiente01Principal" />
+								</div>
+								
+								<div id="wrapThumbs">
+									<div id="thumb_um"><vtex:contentPlaceHolder id="PHAmbiente01Thumb01" /></div>
+									<div id="thumb_dois"><vtex:contentPlaceHolder id="PHAmbiente01Thumb02" /></div>
+									<div id="thumb_tres"><vtex:contentPlaceHolder id="PHAmbiente01Thumb03" /></div>
+									<div id="thumb_quatro"><vtex:contentPlaceHolder id="PHAmbiente01Thumb04" /></div>
+								</div>
+							</div>
+						</div>
+						<div class="tab">
+							<div id="ambiente_dois">
+								<div id="img_principal">
+									<vtex:contentPlaceHolder id="PHAmbiente02Principal" />
+								</div>
+								
+								<div id="wrapThumbs">
+									<div id="thumb_um"><vtex:contentPlaceHolder id="PHAmbiente02Thumb01" /></div>
+									<div id="thumb_dois"><vtex:contentPlaceHolder id="PHAmbiente02Thumb02" /></div>
+									<div id="thumb_tres"><vtex:contentPlaceHolder id="PHAmbiente02Thumb03" /></div>
+									<div id="thumb_quatro"><vtex:contentPlaceHolder id="PHAmbiente02Thumb04" /></div>
+								</div>
+							</div>                
+						</div>
+						<div class="tab">
+							<div id="ambiente_tres">
+								<div id="img_principal">
+									<vtex:contentPlaceHolder id="PHAmbiente03Principal" />
+								</div>
+								
+								<div id="wrapThumbs">
+									<div id="thumb_um"><vtex:contentPlaceHolder id="PHAmbiente03Thumb01" /></div>
+									<div id="thumb_dois"><vtex:contentPlaceHolder id="PHAmbiente03Thumb02" /></div>
+									<div id="thumb_tres"><vtex:contentPlaceHolder id="PHAmbiente03Thumb03" /></div>
+									<div id="thumb_quatro"><vtex:contentPlaceHolder id="PHAmbiente03Thumb04" /></div>
+								</div>
+							</div>
+						</div>
+						<div class="tab">
+							<div id="ambiente_quatro">
+								<div id="img_principal">
+									<vtex:contentPlaceHolder id="PHAmbiente04Principal" />
+								</div>
+								
+								<div id="wrapThumbs">
+									<div id="thumb_um"><vtex:contentPlaceHolder id="PHAmbiente04Thumb01" /></div>
+									<div id="thumb_dois"><vtex:contentPlaceHolder id="PHAmbiente04Thumb02" /></div>
+									<div id="thumb_tres"><vtex:contentPlaceHolder id="PHAmbiente04Thumb03" /></div>
+									<div id="thumb_quatro"><vtex:contentPlaceHolder id="PHAmbiente04Thumb04" /></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<span id="btn_mais_ambientes"><a href="/ambientes/">Veja todos Ambientes</a></span>
+					
+					<ul class="ambientes_navigation clearfix">
+						
+					</ul>
+				</div>
+				
+			</div>
+			
+			<div id="wrap_btns_ambientes">
+			
+				<div id="secao_especial_cadeiras">
+					<a href="/ambientes/especial_cadeiras/"><span></span><p>Seção Especial de Cadeiras</p></a>
+				</div>
+				<div id="secao_moveis_sustentaveis">
+					<a href="/ambientes/moveis_sustentaveis/"><span></span><p>Seção Móveis Sustentáveis</p></a>
+				</div>
+				<div id="secao_vendas_corporativas">
+					<a href="/ambientes/vendas_corporativas/"><span></span><p>Vendas Corporativas</p></a>
+				</div>
+			
+			</div>
+			
+		</div>			
+	</div>
+
+<!--  SubTemplate: footer -->
+<vtex:template id="footer" />
+<!-- /SubTemplate: footer -->
+
+</body>
+</html>

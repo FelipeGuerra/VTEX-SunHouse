@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+<title>Loja Modelo</title>
+<vtex:metaTags/>
+
+<vtex:template id="scripts" />
+
+<!--  SubTemplate: pngIeFix -->
+<vtex:template id="pngIeFix" />
+<!-- /SubTemplate: pngIeFix -->
+</head>
+
+<body>
+
+<!--  SubTemplate: topBar -->
+<vtex:template id="topBar" />
+<!-- /SubTemplate: topBar -->
+
+<!--  SubTemplate: header -->
+<vtex:template id="header" />
+<!-- /SubTemplate: header -->
+
+    <div id="wrapProdutosMenu">
+		<div id="banner_dormitorios" class="banners_menu"><vtex:contentPlaceHolder id="banner_dormitorios" /></div>
+		<div id="banner_sala_de_estar" class="banners_menu"><vtex:contentPlaceHolder id="banner_sala_de_estar" /></div>
+		<div id="banner_cozinha_e_jantar" class="banners_menu"><vtex:contentPlaceHolder id="banner_cozinha_e_jantar" /></div>
+		<div id="banner_escritorios" class="banners_menu"><vtex:contentPlaceHolder id="banner_escritorios" /></div>
+		<div id="banner_decoracao" class="banners_menu"><vtex:contentPlaceHolder id="banner_decoracao" /></div>
+		<div id="banner_jardim_e_lazer" class="banners_menu"><vtex:contentPlaceHolder id="banner_jardim_e_lazer" /></div>
+		<div id="banner_moveis_sustentaveis" class="banners_menu"><vtex:contentPlaceHolder id="banner_moveis_sustentaveis" /></div>
+	</div>
+
+<div id="breadCrumbs">
+    <!--  Controle: breadcrumb -->
+	<vtex.cmc:breadCrumb />
+	<!-- /Controle: breadcrumb -->
+</div>
+
+<div id="banner_destques">
+	<vtex:contentPlaceHolder id="BannerDestaques" />
+</div>
+
+<div id="all">
+
+	
+	<div id="sideBar">
+		<div id="departmentNavigator" class="navigator">
+			<h2>Categoria</h2>
+			<!--  Controle: navegador de departamento -->
+			<vtex.cmc:departmentNavigator />
+			<!-- /Controle: navegador de departamento -->
+		</div>
+		
+		<div id="areas_sideBar">
+			<vtex:contentPlaceHolder id="BotoesSideBar" />
+		</div>
+	</div>
+	
+	
+	
+	<div id="content">
+		<div id="topBanners">
+			<!--  placeholder -->
+			<vtex:contentPlaceHolder id="PHbanner1" />
+			<!-- /placeholder -->
+			<div id="mask_banner_categoria"></div>
+		</div>
+
+		<!--  Controle: Titulo -->
+		<vtex.cmc:searchTitle />
+		<!-- /Controle: Titulo -->
+		
+		<div id="collections">
+			<div class="collectionWrap">
+				<!--  Controle: Resultado da busca / Lista de produtos -->
+				<vtex.cmc:searchResult layout="85e23371-f0a2-43c2-a6ac-e5464c462fb3" itemCount="12" columnCount="4" />
+				<!--  /Controle: Resultado da busca / Lista de produtos -->
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!--  SubTemplate: footer -->
+<vtex:template id="footer" />
+<!-- /SubTemplate: footer -->
+
+</body>
+</html>

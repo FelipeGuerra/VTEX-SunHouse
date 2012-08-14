@@ -1,0 +1,235 @@
+/* Hidden items */
+/*.user-review h4,
+.rating-wrapper strong,
+#opcoes-avalie,
+.avalie-produto,
+.util,
+ul.rating,
+.email-resenha,
+.cidade-resenha{display:none;}*/
+
+/* Superzoom */
+
+.jqZoomPup {
+    background-color: #FFFFFF;
+    border-color: #C4C4C4;
+    border-style: solid;
+    cursor: crosshair;
+    opacity: 0.6;
+    overflow: hidden;
+    z-index: 10;
+}
+.jqZoomPup img {
+    border: 0 none;
+}
+.preload {
+    display: none;
+}
+
+.jqZoomWindow {
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    height: 460px !important;
+    width: 520px !important;
+    position: relative;
+}
+
+/* Layout */
+#sideBar{width:300px;}
+#content{width:650px;}
+#search{padding-bottom:38px;}
+
+
+.productDescriptionShort{margin-bottom:8px;}
+
+/* Collections */
+#collections{border:none;margin-top:55px;}
+.prateleira{border:none;margin-bottom:30px;}
+
+.vitrine .vitrine li{width:170px;margin-right:47px;padding-top:30px;}
+
+#divTitulo,
+#deliverytime strong,
+h2.title,
+.vitrine h2,
+#resenha h4,
+.formUserComments h2{border-bottom:1px solid #333;display:block;font-size:12px;font-weight:700;margin-bottom:13px;padding-bottom:10px;}
+.vitrine img{height:170px;width:170px;}
+
+.vitrine .flag.exclusivo{background:url("/arquivos/flag-exclusivo2.gif");height:25px;width:142px;}
+.vitrine .flag.lancamento{background:url("/arquivos/flag-lancamento2.png");height:82px;top:128px;width:97px;}
+
+/* Images */
+.thumbs{margin-top:10px;overflow:auto;}
+.thumbs li{float:left;}
+
+/* Flags */
+#flags{margin-bottom:10px;overflow:auto;}
+#flags p{float:left;margin-right:12px;}
+#flags .lancamento{margin-top:8px;}
+
+/* Buy button */
+.buy-button{background:#195073;color:#fff;float:right;font-weight:700;padding:3px 6px;}
+
+/* Price */
+#productPrice{margin-bottom:15px;}
+
+/* Payment options */
+#productPayment{margin-bottom:20px;}
+.titulo-parcelamento{font-weight:700;margin-bottom:4px;}
+
+/* Shipping */
+#popupCalculoFreteWrapper{margin:20px 0;}
+#popupCalculoFreteWrapper a,
+.see-other-payment-method-link{color:#195073;}
+
+#calculoFrete{margin-bottom:20px;}
+#calculoFrete h1,
+#calculoFrete .close{display:none;}
+#calculoFrete h2,
+#productList h3{font-weight:700;}
+
+.freight-values{margin-top:10px;}
+.freight-values th,
+.freight-values td{padding-right:10px;}
+
+/* Description */
+#productDescription{margin-top:20px;}
+
+/* New Sku Selector */
+.topic{margin:5px 0 10px;}
+.topic input{margin-right:4px;}
+.topic label{margin-right:15px;}
+
+/* New Sku Selector Checkbox*/
+.item_unavaliable{color:red;text-decoration:line-through;}
+
+/* Elements on right side */
+.toRight{position:absolute;right:0;}
+
+#productList{top:140px;width:114px;}
+#productRefer{top:100px;}
+
+/* Buy together */
+#divCompreJunto{margin-top:30px;}
+#divCompreJunto td{padding:10px;}
+#divCompreJunto .plus,
+#divCompreJunto .equal{font-size:16px;font-weight:700;}
+#divCompreJunto a{text-decoration:underline;}
+
+/* User opinion */
+#resenha{margin-top:25px;}
+
+.emptyRatingStar,
+.filledRatingStar{float:left;height:18px;width:18px;}
+.filledRatingStar{background-position:0 -20px;}
+.rating-produto,
+.rating-demonstrativo,
+.rating-wrapper .rating{height:18px;width:87px;}
+.ratingStar,
+.rating-produto,
+.rating-demonstrativo,
+.rating-wrapper div{background-image:url("/arquivos/sprite-stars.gif");background-repeat:no-repeat;display:block;text-indent:-999em;}
+.a05,
+.a10,
+.avaliacao05,
+.avaliacao10{background-position:0 -20px;}
+.a15,
+.a20,
+.avaliacao15,
+.avaliacao20{background-position:0 -40px;}
+.a25,
+.a30,
+.avaliacao25,
+.avaliacao30{background-position:0 -60px;}
+.a35,
+.a40,
+.avaliacao35,
+.avaliacao40{background-position:0 -80px;}
+.a45,
+.a50,
+.avaliacao45,
+.avaliacao50{background-position:0 -100px;}
+
+.media span{display:block;}
+.media em{display:block;margin-top:6px;}
+.media em span{float:left;}
+
+#spnRatingProdutoBottom,
+.media em span{float:left;margin-right:10px;}
+
+#ulPubliqueResenha{float:left;}
+
+.links-resenha-usuario{clear:both;padding-top:30px;}
+
+.resenhas{line-height:1.1em;margin-top:30px;}
+.resenhas .dados{text-transform:uppercase;}
+
+.rating-wrapper div{margin:5px 0;}
+
+ul.rating{clear:left;}
+
+ul.rating,
+.avalie-produto{float:left;margin-right:100px;padding-top:20px;overflow:hidden;width:200px;}
+.rating li{overflow:hidden;padding:4px 0;}
+
+.voteRatingStar{float:left;margin-right:10px;}
+
+.avalie-produto h5,
+.media span{font-weight:700;margin-top:10px;}
+
+#opcoes-avalie p{display:none;}
+
+.rating-avalie-wrapper{overflow:hidden;padding:5px 0;}
+
+#resenha a{text-decoration:underline;}
+
+.considera-util,
+.bts{overflow:hidden;padding:10px 0;}
+
+.opiniao-ajudou .bts{padding-top:0;}
+
+.resenha{clear:both;padding-top:20px;}
+
+.paginacao,
+.paginacao li,
+.opiniao-ajudou .bts li,
+.detalhes-ordenacao{float:left;margin-right:10px;}
+
+#userReviewAllComments{padding-top:30px;}
+
+/* modal */
+#publishUserReview .footer {
+  position: fixed;
+  z-index:100;
+  top: 0px;
+  left: 0px;
+  height:100%;
+  width:100%;
+  background:#000;
+  opacity: .7;
+  filter:alpha(opacity=70);
+  -moz-opacity:0.7;
+  -khtml-opacity: 0.7;
+}
+
+#publishUserReview .header {
+  font: 12px Arial, Helvetica, sans-serif;
+  color: #333333;
+  position: fixed;
+  background: #ffffff;
+  z-index: 102;
+  color:#000000;
+  border: 4px solid #525252;
+  text-align:left;
+  top:50%;
+  left:50%;
+  padding:10px;
+  width:500px;
+  height:300px;
+  margin:-150px 0 0 -250px;
+}
+.formUserComment { /* ie6 hack */
+position: absolute;
+margin-top: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');
+}
