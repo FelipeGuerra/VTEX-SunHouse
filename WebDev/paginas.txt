@@ -1,0 +1,10 @@
+carrinho
+login carrinho
+entrega carrinho
+pagamento carrinho
+confirmação carrinho
+finalização carrinho
+login
+cadastro usuario
+meu perfil
+meus pedidos
