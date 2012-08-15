@@ -115,6 +115,8 @@ $(document).ajaxStop(function(){
 	var pagerBottomWidth = $('.pager.bottom').width()
 	$('.pager.bottom').css('margin-left', (pagerBottomWidth/2)*-1);
 
+	$('#menu div.menu-departamento > ul').append('<div id="shadowMenu_left" />');
+	$('#menu div.menu-departamento > ul').append('<div id="shadowMenu_right" />');
 	
 	/*banner menu*/
 	$('#banner_dormitorios').appendTo('ul.dormitorios');

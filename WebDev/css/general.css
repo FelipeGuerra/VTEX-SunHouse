@@ -376,7 +376,15 @@ a:hover{text-decoration:underline;}
 	border-left: solid 1px #FFA139;
 }
 
-#menu h3 a:hover{text-decoration:none;}
+#menu h3 a:hover {
+	text-decoration: none;
+	background: #EA7F00;
+	box-shadow: inset -1px 3px 5px #C46B00;
+	-moz-box-shadow: inset -1px 3px 5px #C46B00;
+	-o-box-shadow: inset -1px 3px 5px #C46B00;
+	-webkit-box-shadow: inset -1px 3px 5px #C46B00;
+	-ms-box-shadow: inset -1px 3px 5px #C46B00;
+}
 
 #menu ul {
 	background: white;
@@ -420,7 +428,25 @@ a:hover{text-decoration:underline;}
 	border-top:none;
 }
 
-#menu .menu-departamento ul > li {
+#shadowMenu_left {
+	position: absolute;
+	left: -16px;
+	bottom: -19px;
+	width: 296px;
+	height: 155px;
+	background: url(/arquivos/shadow_menu.png) no-repeat bottom left;
+}
+
+#shadowMenu_right{
+	position: absolute;
+	right: -16px;
+	bottom: -19px;
+	width: 296px;
+	height: 155px;
+	background: url(/arquivos/shadow_menu.png) no-repeat bottom right;
+}
+
+#menu .menu-departamento > ul > li {
 	float: left;
 	border-left: solid 1px #E77918;
 	margin: 0 10px;
@@ -430,7 +456,8 @@ a:hover{text-decoration:underline;}
 #menu .menu-departamento ul li ul li {
 	float: none;
 	border: none;
-	padding: 5px 0;
+	padding: 0;
+	margin: 0 10px;
 }
 
 #menu #linkVipClub{color:#ededed;float:right;padding-left:8px;padding-right:11px;}
@@ -483,13 +510,13 @@ a:hover{text-decoration:underline;}
 }
 
 #menu .banners_menu #wrap_prices #prices_center {
-	width: 170px;
+	width: 180px;
 	text-align: center;
 }
 
 #menu .banners_menu #wrap_prices .oldPrice {
 	font-size: 10px;
-	color: #CCC;
+	color: #9C9C9C;
 	text-decoration: line-through;
 }
 
@@ -517,6 +544,11 @@ a:hover{text-decoration:underline;}
 	border: none!important;
 }
 
+.banners_menu li {
+	width: 180px;
+	text-align: center;
+}
+
 #menu .banners_menu .productImage img {
 	width: 140px;
 	height: 140px;
@@ -527,7 +559,7 @@ a:hover{text-decoration:underline;}
 
 #menu .banners_menu #wrap_prices {
 	position: absolute;
-	width: 170px;
+	width: 180px;
 	top: 0;
 	line-height: 1;
 	left: 0;
@@ -539,7 +571,7 @@ a:hover{text-decoration:underline;}
 
 .banners_menu div ul li .data {
 	position: relative;
-	width: 140px!important;
+	width: 180px!important;
 }
 
 /* Banners and newsletter */
@@ -574,7 +606,7 @@ a:hover{text-decoration:underline;}
 
 #banner2, #banner3, #topNewsletter {
 	float: left;
-	margin: 0 0 0 9px;
+	margin: 0 0 0 10px;
 }
 
 #banner1{float:left;}
@@ -1105,6 +1137,9 @@ p.quickView {
 
 #nav li { width: 50px; float: left; margin: 8px; list-style: none }
 #nav a { width: 50px; padding: 3px; display: block; border: 1px solid #ccc; }
+#nav a::selection {
+	background: transparent;
+}
 #nav li.activeSlide a { background: #fff }
 #nav a:focus { outline: none; }
 #nav img { border: none; display: block }
@@ -1158,7 +1193,7 @@ li.activeSlide img {
 	position: absolute;
 	bottom: 7px;
 	z-index: 10;
-	left: -4px;
+	left: -3px;
 }
 
 /* Carousel */
@@ -1551,10 +1586,12 @@ h2.titulo-sessao{color:#353535;}
 h2.titulo-sessao{margin-left:4px;}
 
 #breadCrumbs {
-	width: 950px;
+	width: 931px;
 	margin: 0 auto;
-	padding: 5px 20px 0;
+	padding: 5px 20px 5px;
 	font-size: 12px;
+	background: #F1F1F1;
+	border-bottom: solid 1px #CCC;
 }
 
 /* Titulo da pagina */
