@@ -1,7 +1,13 @@
 $(document).ready(function() {
 	
+	$('#popupCalculoFreteWrapper a').click();
+	
 	$('.sub').last().remove()
 	
+	$('#productList .toggleLists').click(function(){
+		$(this).next('.giftlist').slideToggle();
+	});
+
 	
 	jQuery('.wrap_vitrine_home.carousel .collectionWrap .vitrine ul').jcarousel({
 		auto: 		0,
@@ -107,6 +113,24 @@ $(document).ready(function() {
 		});
 	});
 	*/
+	
+	$('#socialShare #gplus').html('<g:plusone></g:plusone>');
+	
+	/* add pinterest*/
+	
+	var imgSrcPin = $('.apresentacao #image img').attr('src');
+	var domainPin = document.domain;
+	
+	var imgPin = domainPin + imgSrcPin
+	var locationPin = window.location
+	
+	$('#socialShare #pinterest').html('<a href="http://pinterest.com/pin/create/button/?url='+locationPin+'&media=http://'+imgPin+'" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>');
+	
+	/* add FacebookComments*/
+	var locationFaceComm = window.location.href
+		
+	$('#comentariosFacebook').html('<div class="fb-comments" data-href="'+locationFaceComm+'" data-num-posts="2" data-width="900"></div>');
+	
 });
 
 $(document).ajaxStop(function(){

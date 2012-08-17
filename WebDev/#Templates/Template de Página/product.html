@@ -9,6 +9,14 @@
 <link rel="stylesheet" type="text/css" href="~/arquivos/product.css" />
 <link rel="stylesheet" type="text/css" href="~/arquivos/thickbox.css" />
 <vtex:template id="pngIeFix" />
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </head>
 
 <body id="produto">
@@ -30,89 +38,112 @@
 	<div id="banner_moveis_sustentaveis" class="banners_menu"><vtex:contentPlaceHolder id="banner_moveis_sustentaveis" /></div>
 </div>
 
+<div id="banner_destques">
+	<vtex:contentPlaceHolder id="BannerDestaques" />
+</div>
+
+
 <div id="all">
-
-	
-	<div id="sideBar">
-		<!--  Controle: imagem do produto -->
-		<vtex.cmc:ProductImage />
-		<!-- /Controle: imagem do produto -->
+	<div id="breadCrumbs">
+		<!--  Controle: breadcrumb -->
+		<vtex.cmc:breadCrumb />
+		<!-- /Controle: breadcrumb -->
 	</div>
-	
 	<div id="content">
-		<!--  Controle: nome do produto -->
-		<h1><vtex.cmc:productName /></h1>
-		<!-- /Controle: nome do produto -->
 		
-		<!--  Controle: botao comprar -->
-		<vtex.cmc:BuyButton />
-		<!-- /Controle: botao comprar -->
-		
-		<!--  Controle: breve descricao do produto -->
-		<vtex.cmc:productDescriptionShort />
-		<!-- /Controle: breve descricao do produto -->
-		
-		<!--  Controle: flags -->
-		<div id="flags"><vtex.cmc:hightLight /></div>
-		<!-- /Controle: flags -->
-		
-		<!--  Controle: seletor de sku -->
-                <vtex.cmc:stockKeepingUnitSelection />
-		<!-- /Controle: seletor de sku -->
+		<div id="wrapProduto">
+			<h1><vtex.cmc:productName /></h1>
+			<div id="imagemProduto">
+				<vtex.cmc:ProductImage />
+			</div>
+			<div id="detalhesProdutoTopo">
+				<div id="avaliacaoProduto"><vtex.cmc:evaluationRate/></div>
+				<div id="flags"><vtex.cmc:hightLight /></div>
+				<div id="productPrice"><vtex.cmc:skuPrice /></div>
+				<vtex.cmc:stockKeepingUnitSelection />
+			</div>
+			<h4>Não quer pagar frete? <span>Retire em SP</span> (Zona oeste ou zona leste</h4>
+			<div id="detalhesProdutoBaixo">
+				<div id="calcFrete"><vtex.cmc:shippingValue /></div>
+				<div id="comprar"><vtex.cmc:BuyButton /></div>
+				<div id="productList">
+					<h3 class="toggleLists"></h3>
+					<vtex.cmc:giftListInsertSku />
+				</div>
+				<div id="productRefer"><vtex.cmc:referAFriend /></div>
+				<div id="socialShare">
+					<div id="twitter">
+						<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</div>
+					
+					<div id="facebook">
+						<div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+					</div>
+					
+					<script type="text/javascript">
+						  window.___gcfg = {lang: 'pt-BR'};
 
-		<!--  Controle: preco do produto -->
-		<div id="productPrice"><vtex.cmc:skuPrice /></div>
-		<!-- /Controle: preco do produto -->
-		
-		<!--  Controle: formas de pagamento -->
-		<div id="productPayment"><vtex.cmc:OtherPaymentMethod/></div>
-		<!-- /Controle: formas de pagamento -->
-		
-		<!--  Controle: calcular frete -->
-		<vtex.cmc:shippingValue />
-		<!-- /Controle: calcular frete -->
-		
-		<!--  Controle: lista -->
-		<div id="productList" class="toRight"><vtex.cmc:giftListInsertSku /></div>
-		<!-- /Controle: lista -->
-
-		<!--  Controle: indicar a amigo -->
-		<div id="productRefer" class="toRight"><vtex.cmc:referAFriend /></div>
-		<!-- /Controle: indicar a amigo -->
-		
-		<!--  Controle: disponibilidade -->
-		<vtex.cmc:Delivery />
-		<!-- /Controle: disponibilidade -->
-		
-		<!--  Controle: servicos -->
-		<vtex.cmc:stockKeepingUnitService />
-		<!-- /Controle: servicos -->
-		
-		<!--  Controle: descricao do produto -->
-		<div id="productDescription">
-			<h2 class="title">Descrição do Produto</h2>
-			<vtex.cmc:ProductDescription />
+						  (function() {
+							var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+							po.src = 'https://apis.google.com/js/plusone.js';
+							var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+						  })();
+						</script>
+					<div id="gplus"></div>
+					
+					<div id="pinterest">
+						
+					</div>
+				</div>
+				<div id="shadowWrapProduto"></div>
+			</div>
+			
+			
 		</div>
-		<!-- /Controle: descricao do produto -->
-
-		<!--  Controle: especificacao do produto -->
-		<vtex.cmc:productSpecification />
-		<!-- /Controle: especificacao do produto -->
 		
-		<!--  Controle: compre junto -->
-		<vtex.cmc:BuyTogether/>
-		<!-- /Controle: compre junto -->
+		<div id="productDescription">
+			<h2 class="title">Informações sobre o produto:</h2>
+			<vtex.cmc:ProductDescription />
+			<vtex.cmc:productSpecification />
+		</div>
+		
+		<div id="menssagemMontagem">
+			<p>Não oferecemos serviço de montagem para produtos adquiridos pelo site. Nossos móveis são entregues desmontados e embalados com a maior segurança possível. Dentro da embalagem, há um manual detalhado e desenvolvido especialmente para você, visando sua facilidade no momento de realizar a montagem passo-a-passo.</p>
+		</div>
+		
+		<!--  Controle: formas de pagamento 
+		<div id="productPayment"><vtex.cmc:OtherPaymentMethod/></div> 
+		-->
+		
+		<!--  Controle: calcular frete 
+		<vtex.cmc:shippingValue />
+		/Controle: calcular frete -->
+		
+		<!--  Controle: disponibilidade
+		<vtex.cmc:Delivery />
+		/Controle: disponibilidade -->
+		
+		<!--  Controle: servicos
+		<vtex.cmc:stockKeepingUnitService />
+		/Controle: servicos -->
 		
 		<div id="collections" class="vitrine">
-			<!--  placeholders -->
-			<vtex:contentPlaceHolder id="PHrecomendamos" />
-			<vtex:contentPlaceHolder id="PHrelacionados" />
-			<!-- /placeholders -->
+			<vtex:contentPlaceHolder id="PHsimilares" />
+			<vtex:contentPlaceHolder id="PHQCCT" />
+			<vtex:contentPlaceHolder id="PHQVVT" />
+		</div>
+		
+		<div id="compreJunto">
+			<vtex.cmc:BuyTogether/>
 		</div>
 
-		<!--  Controle: avaliacao do cliente -->
-		<vtex.cmc:UserReview />
-		<!-- /Controle: avaliacao do cliente -->
+		<div id="opniaoUsuarios">
+			<vtex.cmc:UserReview />
+		</div>
+		<div id="comentariosFacebook">
+			
+		</div>
 	</div>
 
 	

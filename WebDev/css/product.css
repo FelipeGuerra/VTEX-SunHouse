@@ -36,32 +36,116 @@ ul.rating,
 
 /* Layout */
 #sideBar{width:300px;}
-#content{width:650px;}
+#content {
+	width: 971px;
+	margin-left: 7px;
+}
+
+#wrapProduto {
+	background: #F1F1F1;
+	float: left;
+	padding-bottom: 20px;
+}
+
 #search{padding-bottom:38px;}
 
 
 .productDescriptionShort{margin-bottom:8px;}
 
 /* Collections */
-#collections{border:none;margin-top:55px;}
+#collections {
+	border: none;
+	float: left;
+	clear: both;
+}
+
 .prateleira{border:none;margin-bottom:30px;}
 
 .vitrine .vitrine li{width:170px;margin-right:47px;padding-top:30px;}
 
-#divTitulo,
-#deliverytime strong,
-h2.title,
-.vitrine h2,
-#resenha h4,
-.formUserComments h2{border-bottom:1px solid #333;display:block;font-size:12px;font-weight:700;margin-bottom:13px;padding-bottom:10px;}
+#divTitulo, #deliverytime strong, h2.title, .vitrine h2, #resenha h4, .formUserComments h2 {
+	border-bottom: 1px solid #CCC;
+	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 13px;
+	padding: 10px 25px;
+	border-top: 1px solid #CCC;
+}
 .vitrine img{height:170px;width:170px;}
 
 .vitrine .flag.exclusivo{background:url("/arquivos/flag-exclusivo2.gif");height:25px;width:142px;}
 .vitrine .flag.lancamento{background:url("/arquivos/flag-lancamento2.png");height:82px;top:128px;width:97px;}
 
 /* Images */
+#imagemProduto {
+	float: left;
+	margin: 0 23px;
+	width: 495px;
+	height: 620px;
+}
+
+
+#imagemProduto #image {
+	background: url(/arquivos/shadow_produto_principal.png) no-repeat bottom left;
+	padding-bottom: 12px;
+}
+
 .thumbs{margin-top:10px;overflow:auto;}
 .thumbs li{float:left;}
+
+#detalhesProdutoTopo {
+	float: left;
+	width: 390px;
+	background: white;
+	padding: 10px;
+}
+
+#avaliacaoProduto {
+	float: left;
+	width: 390px;
+}
+
+#avaliacaoProduto strong {
+	float: left;
+	margin-right: 5px;
+}
+
+#spnRatingProdutoTop {
+	float: left;
+}
+
+#wrapProduto h4 {
+	float: left;
+	width: 390px;
+	padding: 7px 10px;
+	border-top: solid 1px #C8C8C8;
+	border-bottom: solid 1px #C8C8C8;
+	margin: 1px 0;
+}
+
+
+#detalhesProdutoBaixo {
+	float: left;
+	width: 390px;
+	background: white;
+	padding: 10px;
+	position: relative;
+}
+
+#shadowWrapProduto {
+	width: 278px;
+	height: 146px;
+	background: url(/arquivos/shadow_wrapProduto.png) no-repeat bottom center;
+	position: absolute;
+	bottom: -17px;
+	right: -17px;
+	z-index: 1;
+}
+
+#calcFrete > p {
+	display: none;
+}
 
 /* Flags */
 #flags{margin-bottom:10px;overflow:auto;}
@@ -69,10 +153,47 @@ h2.title,
 #flags .lancamento{margin-top:8px;}
 
 /* Buy button */
-.buy-button{background:#195073;color:#fff;float:right;font-weight:700;padding:3px 6px;}
+#comprar {
+	width: 380px;
+	border-top: solid 1px #CCC;
+	margin-top: -11px;
+	padding: 15px 5px;
+}
+
+.buy-button {
+	width: 380px;
+	height: 54px;
+	background: url('/arquivos/btn_adicionar_ao_carrinho.png') no-repeat;
+	display:block;
+	text-indent: -99999px;
+}
+
 
 /* Price */
-#productPrice{margin-bottom:15px;}
+#productPrice{
+	margin: 40px 0 15px 0;
+	line-height: 1;
+}
+
+#productPrice .valor-de {
+	font-size: 18px;
+	color: #999;
+	float: left;
+	margin-right: 5px;
+}
+
+#productPrice .valor-por {
+	font-size: 20px;
+	color: #333;
+}
+
+#productPrice .valor-dividido span span {
+	font-size: 27px;
+}
+
+#productPrice .valor-dividido span strong {
+	font-size: 30px;
+}
 
 /* Payment options */
 #productPayment{margin-bottom:20px;}
@@ -83,18 +204,113 @@ h2.title,
 #popupCalculoFreteWrapper a,
 .see-other-payment-method-link{color:#195073;}
 
-#calculoFrete{margin-bottom:20px;}
+#calcFrete {
+	background: #F6F6F6;
+	margin: -10px -10px 10px -10px;
+	padding: 15px;
+}
+
 #calculoFrete h1,
 #calculoFrete .close{display:none;}
-#calculoFrete h2,
-#productList h3{font-weight:700;}
+
+#calculoFrete h2 {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+
+#calculoFrete label {
+	font-size: 14px;
+}
+
+#calculoFrete input[type="text"] {
+	width: 63px;
+	padding: 5px;
+	background: url('/arquivos/sprite_icons.png') no-repeat -440px -342px;
+	border: none;
+}
+
+#calcFrete fieldset {
+	position: relative;
+}
+
+#btnFreteSimulacao {
+	width: 38px;
+	height: 24px;
+	border: none;
+	background: url('/arquivos/sprite_icons.png') no-repeat -634px -313px;
+	text-indent: -99999px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 185px;
+}
+
+#btnFreteSimulacao {
+	width: 38px;
+	height: 24px;
+	border: none;
+	background: url('/arquivos/sprite_icons.png') no-repeat -634px -313px;
+	text-indent: -99999px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 165px;
+}
+
+.cep-busca {
+	position: absolute;
+	top: 5px;
+	left: 230px;
+}
 
 .freight-values{margin-top:10px;}
 .freight-values th,
 .freight-values td{padding-right:10px;}
 
+#socialShare {
+	border-top: solid 1px #CCC;
+	margin-top: 15px;
+	padding-top: 15px;
+	float: left;
+	width: 390px;
+}
+#socialShare #twitter {
+	float: left;
+}
+
+#socialShare #facebook {
+	float: left;
+}
+
+#socialShare #gplus {
+	float: left;
+}
+#socialShare #gplus > div {
+	width: 90px!important;
+}
+
 /* Description */
-#productDescription{margin-top:20px;}
+#productDescription {
+	margin-top: 20px;
+	float: left;
+	clear: both;
+	width: 100%;
+	font-size: 14px;
+}
+
+.productDescription {
+	padding: 0 20px;
+}
+
+#menssagemMontagem {
+	border-top: solid 1px #CCC;
+	float: left;
+	font-size: 14px;
+	margin: 20px 0;
+	padding: 20px;
+}
 
 /* New Sku Selector */
 .topic{margin:5px 0 10px;}
@@ -104,13 +320,46 @@ h2.title,
 /* New Sku Selector Checkbox*/
 .item_unavaliable{color:red;text-decoration:line-through;}
 
-/* Elements on right side */
-.toRight{position:absolute;right:0;}
+#productList {
+	width: 200px;
+	float: left;
+	position: relative;
+}
 
-#productList{top:140px;width:114px;}
-#productRefer{top:100px;}
+#productList .toggleLists {
+	width: 189px;
+	height: 30px;
+	background: url('/arquivos/sprite_icons.png') no-repeat -439px -266px;
+	cursor: pointer;
+}
+
+#productList .giftlist {
+	width: 154px;
+	background: #868686;
+	display: none;
+	padding: 5px;
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	z-index: 200;
+}
+
+#btnReferAFriend {
+	width: 179px;
+	height: 24px;
+	border: none;
+	background: url('/arquivos/sprite_icons.png') no-repeat -439px -313px;
+	text-indent: -99999px;
+	position: relative;
+	top: 2px;
+}
 
 /* Buy together */
+#compreJunto {
+	float: left;
+	clear: both;
+}
+
 #divCompreJunto{margin-top:30px;}
 #divCompreJunto td{padding:10px;}
 #divCompreJunto .plus,
@@ -118,6 +367,12 @@ h2.title,
 #divCompreJunto a{text-decoration:underline;}
 
 /* User opinion */
+#opniaoUsuarios {
+	float: left;
+	width: 100%;
+	clear: both;
+}
+
 #resenha{margin-top:25px;}
 
 .emptyRatingStar,
@@ -232,4 +487,10 @@ ul.rating,
 .formUserComment { /* ie6 hack */
 position: absolute;
 margin-top: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');
+}
+
+#comentariosFacebook {
+	float: left;
+	clear: both;
+	width: 100%;
 }

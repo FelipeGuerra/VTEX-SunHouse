@@ -755,7 +755,14 @@ a:hover{text-decoration:underline;}
 
 body > p {text-align:center}
 body > p a {color:#505667}
-h1 {color:#505667; font:50px museo-sans-1,sans-serif; margin:20px 0; text-align:center; text-shadow:0 1px 0 rgba(255, 255, 255, 0.5)}
+
+h1 {
+	color: #333;
+	font-size: 24px;
+	margin: 23px;
+	text-align: left;
+	text-shadow: 1px 1px 0px #ffffff;
+}
 
 .box {
 	width: 940px;
@@ -1588,7 +1595,7 @@ h2.titulo-sessao{margin-left:4px;}
 #breadCrumbs {
 	width: 931px;
 	margin: 0 auto;
-	padding: 5px 20px 5px;
+	padding: 10px 20px 5px;
 	font-size: 12px;
 	background: #F1F1F1;
 	border-bottom: solid 1px #CCC;
