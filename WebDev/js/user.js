@@ -48,11 +48,18 @@
 	$('.menuwrap').appendTo('#wrapHeader #menu');
 	$('.bottomSearchWrapper .searchWrapper .search').appendTo('#footerSearch');
 	$('<div id="content_shadow"></div>').insertAfter('.content');
-
+	$('#bandeiras').prependTo('tfoot .total .economizou');
+	$('<div id="banner_destques"><img width="995" height="47" alt="banner destaques" src="/arquivos/banner_destaques.png"></div>').insertBefore('.content');
+	
+	if ($('.steps').length != 0 ){
+		$('#wrapFooterSearch').css('display', 'none')
+	};
+	
 });
 
 $(document).ajaxStop(function(){
 
 	$('.welcome').prependTo('#topBar > div');
+	$('#LoginWrapper').insertAfter('#topBar .welcome');
 
 });

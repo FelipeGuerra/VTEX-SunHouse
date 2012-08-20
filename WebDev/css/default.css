@@ -13,7 +13,7 @@ img{border:none;}
 em{font-style:normal;}
 /*strong{font-weight:normal;}*/
 fieldset{border:none;}
-
+*{outline:none;}
 /* General Tags */
 body{font-size:11px;line-height:1.5em;}
 
@@ -44,7 +44,6 @@ a:hover{text-decoration:underline;}
 }
 #topBar div {
 	overflow: auto;
-	padding-top: 2px;
 	width: auto;
 	margin: 0 auto;
 }
@@ -74,7 +73,6 @@ a:hover{text-decoration:underline;}
 #topBar .welcome {
 	margin-left: 0;
 	float: left;
-	width: 320px;
 	overflow: hidden;
 	padding:0;
 }
@@ -477,6 +475,7 @@ a:hover{text-decoration:underline;}
 
 #bottom_footer div {
 	float: left;
+	background: none;
 }
 
 #wrap_bottom_footer #bottom_footer div #bandeiras {
@@ -547,7 +546,18 @@ a:hover{text-decoration:underline;}
 
 /* Forms submit buttons */
 .bt{background:#f0f0f0;border:1px solid #999;cursor:pointer;}
-.content .bt{font-size:11px;line-height:1.6em;min-width:92px;width:auto;}
+
+.content .bt {
+	font-size: 18px;
+	background: url('/arquivos/btn_orange.jpg');
+	min-width: 92px;
+	width: auto;
+	border: none;
+	height: 34px;
+	line-height: 2;
+	color: white;
+}
+
 .bts span,
 .bts li{float:left;margin-right:10px;}
 
@@ -557,7 +567,22 @@ a:hover{text-decoration:underline;}
 
 /* Layout */
 #aspnetForm{margin:0 auto;position:relative;width:986px;}
-.steps{display:none;}
+
+.steps {
+	background: url('/arquivos/sprite_legado.png') no-repeat;
+	float: left;
+	width: 799px;
+	height: 97px;
+	display: block;
+	text-indent: -99999px;
+	position: relative;
+	top: 45px;
+	margin: 0 0 50px 20px;
+}
+
+.login div.steps {
+	background-position: -3px -280px;
+}
 
 /* Top Bar */
 #divMenuUsuario{display:none;}
@@ -583,7 +608,9 @@ a:hover{text-decoration:underline;}
 
 
 /* Search */
-.searchWrapper{padding:7px 0 13px 8px;}
+.searchWrapper {
+	padding: 5px;
+}
 .search select{margin-left:8px;}
 .search legend{display:none;}
 .search label{color:#7a7a7a;float:left;font-size:10px;font-weight:700;}
@@ -598,10 +625,11 @@ a:hover{text-decoration:underline;}
 /* ---------------------- */
 
 /* Content Layout */
-.login .content,
-.cadastro-cliente .content,
-.manutencao-conta .content,
-.checkout .content{float:right;width:786px;}
+.login .content, .cadastro-cliente .content, .manutencao-conta .content, .checkout .content {
+	float: left;
+	width: 931px;
+	margin-left: 7px;
+}
 
 /* Modals */
 #TB_iframeContent{background:#fff;}
@@ -677,21 +705,93 @@ a:hover{text-decoration:underline;}
 /* ---------------------------------- */
 .aviso-erro{background:#eae9e8;margin-bottom:20px;padding:12px;text-align:center;}
 
-.login .content h4{font-weight:700;margin-bottom:16px;}
+.login .content h4 {
+	font-weight: 700;
+	margin-bottom: 16px;
+	color: #F18300;
+	font-size: 18px;
+}
 
-#ctl00_Conteudo_divLogin{border-right:1px solid #999;float:left;width:450px;}
+.login .content .wrapper p {
+	display: none;
+}
 
-.login label{width:115px;}
+#ctl00_Conteudo_divLogin {
+	width: 410px;
+	border-right: 2px dotted #999;
+	float: left;
+}
+
+.login label {
+	width: 115px;
+	float: left;
+	clear: both;
+}
 .login .grp{margin-top:10px;}
-.login .grp ul,
-.login .continuar{margin-left:116px;}
-.login .fitext{width:270px;}
-.login-email-links{clear:both;overflow:auto;margin-top:2px;}
+.login .grp ul, .login .continuar {
+	margin-left: 10px;
+}
+
+.login .fitext {
+	width: 340px;
+	float: left;
+	clear: both;
+	padding: 5px;
+	border: none;
+	box-shadow: inset 2px 2px 2px #BEBEBE;
+}
+
+.login-email-links {
+	clear: both;
+	overflow: auto;
+	margin-top: 2px;
+}
+
+.login-senha-links {
+	float: left;
+	clear: both;
+}
+
 .login-email-links li,
 .login-email-links a{display:inline;float:left;}
 .login-email-links a{margin-right:10px;}
 
-.register-info{float:right;padding-left:50px;width:280px;}
+.register-info {
+	float: right;
+	padding-left: 50px;
+	width: 460px;
+}
+
+#wrapVantegens div {
+	width: 165px;
+	height: 90px;
+	float: left;
+	padding-left: 60px;
+}
+
+#wrapVantegens div h3 {
+	font-size: 12px;
+	margin-top: 6px;
+}
+
+#site_seguro {
+	margin: 0 5px 5px 0;
+	background: url('/arquivos/sprite_legado.png') no-repeat 7px -88px #fff;
+}
+
+#acompanhe_a_compra {
+	margin-bottom: 5px;
+	background: url('/arquivos/sprite_legado.png') no-repeat -3px -170px #fff;
+}
+
+#formas_de_pagamento {
+	margin-right: 5px;
+	background: url('/arquivos/sprite_legado.png') no-repeat -277px -95px #fff;
+}
+
+#reembolso_total {
+	background: url('/arquivos/sprite_legado.png') no-repeat -277px -173px #fff;
+}
 
 .register-info strong{display:block;margin:20px 0 10px;}
 .register-info .vantagens{list-style:disc outside none;margin-left:13px;}
@@ -857,6 +957,12 @@ input.cep-prefixo{width:70px;}
 /* ---- */
 /* CART */
 /* ---- */
+
+#banner_destques {
+	margin-bottom: -7px;
+	margin-left: -4px;
+}
+
 .content {
 	width: 930px;
 	margin: 0 auto;
@@ -866,64 +972,300 @@ input.cep-prefixo{width:70px;}
 
 /* table of products - general elements */
 .carrinho .content .bt{width:auto;}
-.carrinhoTable{width:100%;}
+.carrinhoTable {
+	width: 100%;
+	margin-bottom: 125px;
+}
 
 .carrinhoTable thead,
-.carrinhoTable tbody{border:1px solid #999;}
+.carrinhoTable tbody{border:none;}
 
-.carrinhoTable thead{background:#ddd;border-bottom:none;color:#666;}
-.carrinhoTable tbody{border-top:none;}
+.carrinhoTable thead {
+	background: url(/arquivos/bg_carrinho_top_table.png) repeat top center;
+	color: black;
+	font-size: 16px;
+}
 
-.carrinhoTable thead th,
-.carrinhoTable tbody input,
-.carrinho tbody td.preco-total{font-size:12px;font-weight:700;}
+.carrinhoTable tbody td {
+	border-top: none;
+	padding: 10px;
+}
 
 .carrinhoTable th{text-align:center;}
-.carrinhoTable th,
-.carrinhoTable td{padding:5px;}
+
+.carrinhoTable th, .carrinhoTable td {
+	padding: 10px 0px;
+}
+
+.carrinhoTable .produto {
+	width: 353px!important;
+}
+
+.carrinhoTable .produto h4 {
+	float: left;
+	width: 305px;
+}
+
+.carrinhoTable .produto h4 a {
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.carrinhoTable .servico {
+	width: 1px;
+	padding: 0;
+}
+
+.carrinhoTable .quantidade .boxQuantidade {
+	text-align: center;
+	border: none;
+	box-shadow: inset 2px 2px 2px #BEBEBE;
+	padding: 5px;
+	width: 20px!important;
+	font-size: 12px;
+}
+
+.carrinhoTable .quantidade {
+	width: 81px;
+}
+
+.carrinhoTable .preco-unitario {
+	width: 100px;
+}
+
+.carrinhoTable .preco-total {
+	width: 110px;
+}
+
+.carrinho .excluir {
+	text-align: center;
+	width: 20px;
+}
+
+.carrinhoTable th {
+	text-align: center!important;
+}
 
 .carrinhoTable tbody input{color:#3a3a38;}
 
 .carrinho .sidebar{display:none;}
 
-.carrinho legend{font-weight:700;}
-.carrinho .grp label{display:block;margin-bottom:6px;}
+.carrinho legend {
+	font-weight: 700;
+	position: relative;
+	left: -58px;
+}
+
+.carrinho .grp label {
+	display: none;
+}
+
+.texto-vale-presente {
+	position: relative;
+}
+
+.carrinhoTable tfoot {
+	position: relative;
+	font-size: 16px;
+}
+
+.carrinho .grp input {
+	position: absolute;
+	top: 5px;
+	z-index:1000;
+	text-align:center;
+}
+
+tfoot td.vale-presente {
+	position: relative;
+}
+
+tfoot td.vale-presente span {
+	position: absolute;
+	top: 10px;
+	right: -40px;
+}
+
+.carrinho .grp input.vale-presente {
+	right: -125px;
+	padding: 5px;
+	width: 168px;
+	top: 5px;
+	border: none;
+	box-shadow: inset 2px 2px 2px #BEBEBE;
+}
+
+.carrinho .grp .ok-carrinho input.fisubmit {
+	right: -220px;
+	background: url(/arquivos/bg_small_buttons.png);
+	border: none;
+	padding: 5px;
+	top: 4px;
+	box-shadow: 2px 2px 2px #9F9F9F;
+	font-weight: bold;
+}
+
+tr.cepline td {
+	position: relative;
+	text-align: right;
+}
+
+tr.cepline td .cep-sufixo {
+	right: -125px;
+	padding: 5px;
+	border: none;
+	box-shadow: inset 2px 2px 2px #BEBEBE;
+	top:13px;
+}
+
+tr.cepline td input.cep-prefixo {
+	right: -82px;
+	padding: 5px;
+	box-shadow: inset 2px 2px 2px #BEBEBE;
+	border: none;
+	top: 13px;
+}
+
+.carrinhoTable tfoot td.texto-cepline legend {
+	position: relative;
+	top: 8px;
+}
+
+.carrinho tr.cepline td .ok-carrinho .fisubmit {
+	top: 12px;
+}
+
+tfoot .total {
+	position: relative;
+}
+
+tfoot .total .valor-total {
+	position: relative;
+}
+
+tfoot .total .valor-total span.valorTotal {
+	position: absolute;
+	right: -36px;
+	top: 10px;
+	font-size: 16px;
+}
+
+.freteTotal {
+	position: relative;
+	left: 38px;
+}
+
+tfoot .total .valor {
+	font-size: 24px;
+	color: #F07F00;
+}
 
 /* table of products - specific elements */
-.carrinho td.preco-unitario,
-.carrinho td.preco-total{text-align:right;}
+.carrinho tfoot td.preco-total {
+	text-align: right;
+	font-size: 20px;
+	padding-right: 5px;
+}
 
-.carrinho td.preco-unitario,
-.carrinho tbody td.preco-total{color:#195073;}
+.carrinhoTable tfoot tr {
+	border-top: solid 1px #9F9F9F;
+}
+
+.carrinhoTable tfoot td {
+	padding: 10px 0;
+	text-align: right;
+}
+
+.valor-parcelado {
+	display: none;
+}
+
+.carrinho td.preco-unitario {
+	color: #333;
+	font-size: 18px;
+}
+
+.carrinho td.preco-unitario, .carrinho tbody td.preco-total {
+	text-align: center;
+	font-size: 18px;
+}
 
 .carrinho td.preco-unitario s{color:#666;font-weight:normal;}
 
 .carrinhoTable .produto a{float:left;margin-right:12px;}
 .carrinhoTable .produto img{display:block;}
 
-.carrinho .controle-quantidade{display:none;}
+.carrinhoTable .quantidade fieldset {
+	position: relative;
+}
 
-.carrinhoTable .txtSubTotal{padding-left:414px;}
+.carrinhoTable .quantidade .controle-quantidade {
+	display: block;
+	position: absolute;
+	right: 15px;
+	top: 0;
+}
 
-.carrinhoTable .quantidade{text-align:center;}
+.carrinhoTable .excluir a {
+	width: 15px;
+	height: 15px;
+	display: block;
+	background: url('/arquivos/sprite_legado.png') no-repeat -249px -122px;
+	text-indent: -99999px;
+	padding: 0;
+	margin: 0;
+}
+
+.carrinhoTable .quantidade .controle-quantidade li a {
+	width: 15px;
+	height: 15px;
+	background: url('/arquivos/sprite_legado.png');
+	text-indent: -99999px;
+	display: block;
+}
+
+.carrinhoTable .quantidade .controle-quantidade li.adicionar-item a {
+	background-position: -230px -122px;
+}
+
+.carrinhoTable .quantidade .controle-quantidade li.remove-item a {
+	background-position: -230px -138px;
+}
+
+.carrinhoTable .txtSubTotal {
+	padding-left: 414px;
+	text-align: right;
+	position: relative;
+}
+
+.carrinhoTable .txtSubTotal span.subtotaltxt {
+	position: absolute;
+	right: -40px;
+	top: 10px;
+}
+
+.carrinhoTable .quantidade {
+	text-align: center;
+	position: relative;
+}
 .carrinhoTable .preco-unitario,
 .carrinhoTable tbody .preco-total,
 .carrinho .frete-gratis,
-.carrinho .valor{text-align:right;width:110px;}
+.carrinho .valor{text-align:right;width:110px;padding-right: 5px;}
 .carrinhoTable .excluir a{font-size:10px;text-decoration:underline;}
-
-.carrinho tfoot .preco-total,
-.carrinho tfoot .frete-gratis,
-.carrinho tfoot .valor{padding-right:58px;}
 
 .carrinho .total,
 .carrinho .valor-parcelado{font-size:12px;font-weight:700;}
 
 .carrinho div.valor-parcelado{position:absolute;margin-left:408px;width:300px;}
 
-.carrinho .excluir{text-align:center;width:43px;}
+.carrinho .excluir {
+	text-align: center;
+	width: 1px;
+	padding: 0 5px 0 0;
+}
 
-.carrinho label.cep-prefixo{display:block;}
+.carrinho label.cep-prefixo{display:none;}
 
 .dica-carrinho{padding-top:20px;}
 
@@ -968,4 +1310,36 @@ input.cep-prefixo{width:70px;}
 	height: 16px;
 	margin-bottom: 25px;
 	background: url(/arquivos/shadow_content.png) no-repeat top center;
+}
+
+#ctl00_Conteudo_pnlDica {
+	width: 730px;
+	margin: 0 auto;
+	padding: 10px;
+	background: white;
+	text-transform: uppercase;
+	border: solid 1px #949494;
+}
+
+#bandeiras {
+	width: 522px;
+	height: 117px;
+	background: url(/arquivos/bandeiras_carrinho.jpg) no-repeat top center;
+	position: absolute;
+}
+
+/* CHECKOUT */
+
+.login .content {
+	margin-bottom: 20px;
+}
+
+.header-steps h1 a {
+	height: 97px;
+	width: 137px;
+	background: url(/arquivos/logo_sun_house.png)no-repeat top center;
+	display: block;
+	text-indent: -99999px;
+	float: left;
+	margin: 10px;
 }
