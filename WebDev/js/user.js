@@ -47,9 +47,8 @@
 	$('.searchWrapper:first fieldset.search').appendTo('#header #search');
 	$('.menuwrap').appendTo('#wrapHeader #menu');
 	$('.bottomSearchWrapper .searchWrapper .search').appendTo('#footerSearch');
-	$('<div id="content_shadow"></div>').insertAfter('.content');
-	$('#bandeiras').prependTo('tfoot .total .economizou');
 	$('<div id="banner_destques"><img width="995" height="47" alt="banner destaques" src="/arquivos/banner_destaques.png"></div>').insertBefore('.content');
+	$('.minha-conta .nav').insertAfter('.content .tabela-pedidos h3');
 	
 	if ($('.steps').length != 0 ){
 		$('#wrapFooterSearch').css('display', 'none')
@@ -61,5 +60,10 @@ $(document).ajaxStop(function(){
 
 	$('.welcome').prependTo('#topBar > div');
 	$('#LoginWrapper').insertAfter('#topBar .welcome');
+	$('.welcome').eq(1).remove();
+	$('.loginmsg').eq(1).remove();
+	$('#bandeiras').prependTo('tfoot .total .economizou');
+	/*$('<div id="alertas" />').insertAfter('.carrinhoTable');*/
+	$('.alerta').insertAfter('.carrinhoTable');
 
 });

@@ -1,4 +1,15 @@
 $(document).ready(function() {
+
+	if($.browser.msie && parseInt($.browser.version, 10) == 7) {
+		//corrige z-index ie7//
+		$(function() {
+			var zIndexNumber = 1000;
+			$('div').each(function() {
+				$(this).css('zIndex', zIndexNumber);
+				zIndexNumber -= 10;
+			});
+		});
+	}
 	
 	$('#popupCalculoFreteWrapper a').click();
 	
