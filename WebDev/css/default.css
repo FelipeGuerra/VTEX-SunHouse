@@ -23,6 +23,7 @@ select,
 textarea{color:#333;font-family: "Trebuchet MS", Arial, Verdana, Geneva, sans-serif}
 
 input[type="text"],
+input[type="password"],
 select, 
 textarea {
 	border: none;
@@ -32,6 +33,15 @@ textarea {
 	width: 350px;
 }
 
+input.dia, input.mes {
+	width: 30px;
+	text-align: center;
+}
+
+input.ano {
+	width: 50px;
+	text-align: center;
+}
 
 a{color:#333;text-decoration:none;}
 a:hover{text-decoration:underline;}
@@ -80,6 +90,11 @@ a:hover{text-decoration:underline;}
 	float: left;
 	overflow: hidden;
 	padding:0;
+}
+
+#divMenuWelcome {
+	width:430px;
+	text-align:right;
 }
 
 #topBar #links_topBar {
@@ -149,7 +164,7 @@ a:hover{text-decoration:underline;}
 	float: left;
 	height: 97px;
 	width: 137px;
-	background: url(/arquivos/logo_sun_house.png)no-repeat top center;
+	background: url(/arquivos/logo_sun_house.png) no-repeat top center;
 }
 
 #icons_header {
@@ -157,6 +172,10 @@ a:hover{text-decoration:underline;}
 	font-size: 14px;
 	float: left;
 	margin: 45px 0 0 45px;
+}
+
+#icons_header a {
+	color: #F18300;
 }
 
 #icons_header li {
@@ -286,6 +305,12 @@ a:hover{text-decoration:underline;}
 }
 /****************************************************************************************************/
 /* Footer */
+
+.footer {
+	margin-top: 10px;
+	float: left;
+	width: 100%;
+}
 
 #top_bar_footer {
 	clear: both;
@@ -490,6 +515,7 @@ a:hover{text-decoration:underline;}
 	width: 189px;
 	height: 93px;
 	margin-top: 10px;
+	position: static;
 }
 
 #wrap_bottom_footer #bottom_footer #redes div {
@@ -555,15 +581,14 @@ a:hover{text-decoration:underline;}
 .bt{background:#f0f0f0;border:1px solid #999;cursor:pointer;}
 
 .content .bt {
-	font-size: 18px;
+	font-size: 18px!important;
 	background: url('/arquivos/btn_orange.jpg');
-	min-width: 92px;
 	width: auto;
 	border: none;
-	line-height: 2;
 	color: white;
 	text-align: center;
-	padding: 0 15px;
+	padding: 6px 15px;
+	text-decoration: none!important;
 }
 
 .content .bt a{
@@ -682,13 +707,16 @@ a:hover{text-decoration:underline;}
 .manutencao-conta h3, 
 .cadastro-endereco h3, 
 .checkout .content h3, 
-.tabela-pedidos h3 {
+.tabela-pedidos h3,
+.meus-dados h4,
+.minha-conta .area-3-2-10 h3 {
 	font-weight: 700;
-	padding: 0 0 5px;
+	padding: 15px 0 5px;
 	border-bottom: dotted 2px #9F9F9F;
-	color: #f18300;
+	color: #DB6500;
 	font-size: 18px;
 	margin-bottom: 10px;
+	width: 100%;
 }
 
 .lista-endereco legend {
@@ -696,7 +724,7 @@ a:hover{text-decoration:underline;}
 }
 
 .content .tabela-pedidos h3 {
-	padding-top: 20px;
+	padding-top: 40px;
 	margin-bottom: 20px;
 }
 
@@ -728,10 +756,14 @@ a:hover{text-decoration:underline;}
 .endereco-compra .content label, 
 .minha-conta .content label, 
 .nao-altera span {
-float: left;
-margin-top: 2px;
-width: 215px;
-font-size: 14px;
+	float: left;
+	margin-top: 2px;
+	width: 215px;
+	font-size: 14px;
+}
+
+.isento label {
+	*float: none;
 }
 
 /* Form Items Margin */
@@ -751,7 +783,11 @@ font-size: 14px;
 .voltar a, 
 .confirmar-pedido input, 
 .cadastrar-novo a {
-	padding: 0 15px;
+    padding: 8px 15px;
+}
+
+.forma-pagamento .bt.fibutton {
+	padding: 5px 15px;
 }
 
 /* Form Links */
@@ -769,7 +805,7 @@ font-size: 14px;
 .bts a,
 .voltar a,
 .cadastrar-novo a,
-.continuar-comprando a{display:block;float:left;padding:1px 10px;text-decoration:none !important;width:auto;}
+.continuar-comprando a{display:block;float:left;padding:10px;text-decoration:none !important;width:auto;}
 
 /* Back and link buttons */
 .voltar a,
@@ -880,7 +916,8 @@ font-size: 14px;
 .register-info .vantagens li{margin-bottom:4px;}
 
 .minha-conta .outras-opcoes ul{margin-top:8px;}
-.minha-conta .outras-opcoes a{background:none;clear:both;color:#000;display:block;float:left;text-decoration:underline;}
+.minha-conta .outras-opcoes a{background:none;clear:both;color:#000;display:block;font-size: 12px;float:left;text-decoration:underline!important;line-height:16px;}
+
 
 /* ------- */
 /* Sign Up */
@@ -898,7 +935,13 @@ input.cep-prefixo{width:100px;}
 
 .cadastro-cliente .email,
 .alterar-email input,
-.esqueci-senha .email input{width:185px;}
+.esqueci-senha .email input,
+.grp.fSenha input,
+.grp.fSenhaConf input{width:185px;}
+
+#ctl00_Conteudo_txtCpfCnpj {
+	width: 192px;
+}
 
 /* ------------ */
 /* Change Email */
@@ -919,6 +962,10 @@ input.cep-prefixo{width:100px;}
 .minha-conta .ficheckbox{float:left;margin-top:4px;}
 .minha-conta legend{display:none;}
 
+.minha-conta .recuperar-senha legend {
+	display: block;
+}
+
 /* ------------------------ */
 /* My Account and My Orders */
 /* ------------------------ */
@@ -933,14 +980,39 @@ input.cep-prefixo{width:100px;}
 	top: 10px;
 	width: 100%;
 }
-.minha-conta .abas li{float:left;}
+
+.minha-conta #banner_destques, .login #banner_destques {
+	margin-top: 5px;
+}
+
+.minha-conta .mainContentWrapper {
+	position: relative;
+	font-size: 12px;
+	margin-left: 7px!important;
+}
+
+.minha-conta .abas li {
+	float: left;
+	margin-right: 5px;
+}
+
+.minha-conta .abas li.meu-perfil {
+	border-right: solid 1px;
+	padding-right: 5px;
+}
+
 .minha-conta .abas a{display:block;font-size:15px;padding:3px 9px;}
-.minha-conta .abas .meu-perfil a{background:url("/arquivos/tabs-bg.gif") right 5px no-repeat;}
+.minha-conta .abas  a{text-decoration:none;}
+.minha-conta .abas  a:hover, .minha-conta .abas .ativo a{ background:url('/arquivos/btn_orange.jpg');}
 
 .minha-conta .nav h3 {
-	font-size: 14px;
-	margin: 0;
-	padding: 0;
+	font-size: 18px;
+	line-height: 1;
+	font-weight: bold;
+	color: #DB6500;
+	border-bottom: dotted 2px #9F9F9F;
+	margin-bottom: 20px;
+	padding: 15px 0 5px;
 }
 
 .minha-conta .breadcrumb,
@@ -950,18 +1022,82 @@ input.cep-prefixo{width:100px;}
 .minha-conta .content, 
 .meus-pedidos .content {
 	float: left;
-	position: relative;
 	margin-left: 7px;
 }
 
-.minha-conta .nav,
-.minha-conta .area-3-2,
-.meus-pedidos .content{padding-top:35px;}
+.manutencao-conta .mainContentWrapper .content {
+	padding: 0;
+	background: none;
+}
 
-.minha-conta .nav{
-	float:left;
-	padding-top:0;
-	width:166px;
+.minha-conta .nav {
+	float: left;
+	padding-top: 0;
+	width: 166px;
+	background: #fff;
+	padding: 10px;
+}
+
+.minha-conta.meus-pedidos .abas {
+	margin: 0 20px;
+	width: 930px;
+}
+
+.content.content-meuspedidos {
+	padding: 0;
+	background: none;
+}
+
+.minha-conta.meus-pedidos .content .tabela-pedidos > h3 {
+	margin-left: 200px;
+	width: 720px;
+}
+
+.minha-conta.meus-pedidos .nav {
+	margin-top: -55px;
+	background: #fff;
+	padding: 10px;
+}
+
+.minha-conta.meus-pedidos .nav h3 {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#orderInfoProductList {
+	margin-left: 20px;
+	float: left;
+	width: 715px;
+}
+
+.meus-pedidos .filtrar {
+	float: left;
+	width: 700px;
+	margin: 20px 0 0 20px;
+}
+
+.minha-conta.meus-pedidos label {
+	width: 150px;
+}
+
+.minha-conta.meus-pedidos select {
+	width: 273px;
+}
+
+.minha-conta.meus-pedidos input[type="text"] {
+	width: 263px;
+}
+
+.minha-conta.meus-pedidos input.data {
+	width: 100px;
+	text-align: center;
+}
+
+.minha-conta.meus-pedidos .ok {
+	position: relative;
+	left: 331px;
+	width: 93px;
+	float: left;
 }
 
 .meus-dados h4,
@@ -972,9 +1108,7 @@ input.cep-prefixo{width:100px;}
 .minha-conta .dados dd{float:left;}
 .minha-conta .dados dt{clear:left;width:130px;}
 
-.minha-conta .area-3-2-3 h4,
-.minha-conta .area-3-2-5 h3,
-.minha-conta .area-3-2-10 h3{border-bottom:1px solid #000;font-size:13px;font-weight:700;margin:20px 0 10px;padding:5px 0;}
+
 .minha-conta h3 a{text-decoration:none;}
 
 .minha-conta .area-3-2-5 dt{font-weight:700;margin:15px 0 2px;}
@@ -982,22 +1116,418 @@ input.cep-prefixo{width:100px;}
 .minha-conta .comentario-produto a{text-decoration:underline;}
 .minha-conta .comentario-produto li{margin:3px 0;}
 
+.area-3-1 {
+	float: left;
+	margin-top: 20px;
+}
+
+.area-3-2 {
+	width: 730px;
+}
+
+.area-3-2-2 {
+	position: absolute;
+	top: 0;
+	left: 20px;
+	width: 930px;
+}
+
+.area-3-2-3 {
+	margin-top: 15px;
+}
+
+.area-3-2-3 > h3 {
+	display: none;
+}
+
+.minha-conta .bt {
+	font-size: 18px;
+	background: url('/arquivos/btn_orange.jpg');
+	min-width: 92px;
+	width: auto;
+	border: none;
+	line-height: 2;
+	color: white;
+	text-align: center;
+	padding: 0 15px;
+	text-decoration: none!important;
+}
+
+li.listas {
+	display: none;
+}
+
+
 /* --------- */
 /* My Orders */
 /* --------- */
-.meus-pedidos .filtrar{margin-top:30px;}
+
+.meus-pedidos .filtrar {
+	margin-top: 30px;
+	float: right;
+}
+
+#orderInfoProductList th {
+	background: #fff;
+}
+
+#orderInfoProductList .pedido {
+	text-align: center;
+}
 
 #orderInfoProductList,
 #orderInfoProductList th,
 #orderInfoProductList td{border:1px solid #666;}
 
 #orderInfoProductList th,
-#orderInfoProductList td{padding:2px 5px;}
+#orderInfoProductList td{padding:5px;}
 
 #orderInfoProductList th{font-weight:700;text-align:center;}
 
 #orderInfoProductList .links{text-align:center;}
 #orderInfoProductList a{text-decoration:underline;}
+
+
+/*******//*MDETALHES DO PEDIDO*/ /********/
+
+.meus-pedidos-detalhes #ctl00_BuscaTxt_Top_txtBuscaTop_btnOK {
+	width:30px;
+	height:33px;
+	background:none;
+	border:none;
+	cursor:pointer;
+	text-indent:-99999px;
+	position:relative;
+	top:-2px;
+	left:-32px;
+}
+
+.meus-pedidos-detalhes .content h2 {
+	font-weight: 700;
+	padding: 15px 0 5px;
+	border-bottom: dotted 2px #9F9F9F;
+	color: #DB6500;
+	font-size: 18px;
+	margin-bottom: 10px;
+	margin-left: 185px;
+	width: 735px;
+}
+
+.meus-pedidos-detalhes #sideBar {
+	float:left;
+	margin-top:47px;
+	width:172px;
+	background:#FFF;
+	min-height:403px;
+	padding:0 10px 10px;
+}
+
+.meus-pedidos-detalhes #content {
+	padding-top: 47px;
+	float: left;
+	width: 735px;
+}
+
+.meus-pedidos-detalhes .content {
+	padding: 0;
+	background: none;
+	width: 735px;
+}
+
+.meus-pedidos-detalhes #sideBar h2 {
+	font-size: 18px;
+	line-height: 1;
+	font-weight: bold;
+	color: #DB6500;
+	border-bottom: dotted 2px #9F9F9F;
+	margin-bottom: 20px;
+	padding: 15px 0 5px;
+	display:block;
+}
+
+.meus-pedidos-detalhes #sideBar ul {
+	padding-left:5px;
+}
+
+.meus-pedidos-detalhes .area-3-2-3 h3 {
+	display:block!important;
+	text-transform:capitalize;
+	font-size:22px;
+	color:#000;
+}
+
+.meus-pedidos-detalhes .informacoes-entrega {
+	float:left;
+}
+
+.meus-pedidos-detalhes .informacoes-entrega .pedido-numero {
+	background: #f07b00;
+	text-align: center;
+	width: 285px;
+	padding: 10px 0;
+}
+
+.meus-pedidos-detalhes .informacoes-entrega .pedido-numero strong {
+	color:#FFF;
+	font-size:14px;
+	display:block;
+}
+
+.meus-pedidos-detalhes .informacoes-entrega .pedido-numero span {
+	color:#FFF;
+	font-size:30px;
+	display:block;
+	line-height: 1;
+}
+
+.meus-pedidos-detalhes .dados-entrega {
+	background:none repeat scroll 0 0 #E8E8E8;
+	float:left;
+	width:265px;
+	margin:10px 0;
+	padding:10px;
+}
+
+.meus-pedidos-detalhes .dados-entrega dt {
+	float:left;
+	color:#696969;
+	clear:both;
+	margin-right:5px;
+}
+
+.meus-pedidos-detalhes .dados-entrega dd {
+	float:left;
+	color:#000;
+}
+
+.meus-pedidos-detalhes .dados-entrega .pedido-status {
+	margin-top:3px;
+}
+
+.meus-pedidos-detalhes .dados-entrega #ctl00_Conteudo_rptCompraEntrega_ctl00_lnkCompraEntregaStatusLogTop {
+	background:#d8d8d8;
+	color:#000;
+	font-family:"Trebuchet MS",Verdana,Geneva,sans-serif;
+	font-size:11px;
+	float:left;
+	font-weight:700;
+	padding:3px;
+}
+
+.meus-pedidos-detalhes .descricao-entrega strong {
+	color:#333;
+}
+
+.meus-pedidos-detalhes .box-dados-pedido {
+	float: right;
+	width: 400px;
+	margin: 0 30px 0 0;
+}
+
+.meus-pedidos-detalhes .endereco-entrega {
+font-size:14px;
+}
+
+.meus-pedidos-detalhes .endereco-entrega dt,.meus-pedidos-detalhes .endereco-entrega dd {
+	margin-top:10px;
+}
+
+.meus-pedidos-detalhes .endereco-entrega dt {
+	clear:both;
+	float:left;
+	width:160px;
+	color:#696969;
+}
+
+.meus-pedidos-detalhes .endereco-entrega dd {
+	float:left;
+	color:#000;
+	font-weight:700;
+}
+
+.meus-pedidos-detalhes .box-dados-pedido .descricao-entrega {
+	clear:both;
+}
+
+.meus-pedidos-detalhes table.descricao-compra {
+	clear:both;
+	background:#f2f2f2;
+	width:100%;
+	border-collapse:collapse;
+	text-align:center;
+	font-size:13px;
+}
+
+.meus-pedidos-detalhes table.descricao-compra thead {
+	font-size:14px;
+	color:#696969;
+	background:#FFF;
+}
+
+.meus-pedidos-detalhes table.descricao-compra thead th,
+.meus-pedidos-detalhes table.descricao-compra thead tr {
+	border-top:1px solid #bcbcbc;
+	text-align:center;
+	font-weight:400;
+	padding:0 5px;
+}
+
+.meus-pedidos-detalhes table.descricao-compra .descricao-produto {
+	text-align:left;
+}
+
+.meus-pedidos-detalhes table.descricao-compra tbody th,
+.meus-pedidos-detalhes table.descricao-compra tbody td {
+	background:#f2f2f2;
+	border-top:1px solid #bcbcbc;
+	text-align:center;
+	font-weight:400;
+	padding:0 5px;
+}
+
+.meus-pedidos-detalhes tfoot {
+	background:#FFF;
+	border-top:1px solid #BCBCBC;
+	border-bottom:1px solid #BCBCBC;
+}
+
+.meus-pedidos-detalhes tfoot .subtotal,
+.meus-pedidos-detalhes tfoot .frete,
+.meus-pedidos-detalhes tfoot .valor-total {
+	text-align:right;
+}
+
+.meus-pedidos-detalhes tfoot .subtotal {
+	padding-right:99px;
+	font-weight:400;
+}
+
+.meus-pedidos-detalhes tfoot .frete {
+	padding-right:116px;
+	font-weight:400;
+}
+
+.meus-pedidos-detalhes tfoot .valor-total {
+	padding-right:81px;
+}
+
+.meus-pedidos-detalhes tfoot .valor-total,.meus-pedidos-detalhes tfoot .valor {
+	font-weight:700;
+}
+
+.meus-pedidos-detalhes table.descricao-compra tfoot th,
+.meus-pedidos-detalhes table.descricao-compra tfoot td,
+.meus-pedidos-detalhes table.descricao-compra tbody th,
+.meus-pedidos-detalhes table.descricao-compra tbody td {
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.meus-pedidos-detalhes #ctl00_TopBar_TopBar2_outerHeader #ctl00_TopBar_TopBar2_lnkHome,
+.meus-pedidos-detalhes #ctl00_TopBar_TopBar2_pnlTopBarAssincrono,
+.meus-pedidos-detalhes .informacoes-entrega .pedido-data,
+.meus-pedidos-detalhes .dados-entrega .numero-entrega,
+.meus-pedidos-detalhes .box-dados-pedido h3,
+.meus-pedidos-detalhes .endereco-entrega h4,
+.meus-pedidos-detalhes .box-dados-pagamento,
+.meus-pedidos-detalhes div.voltar a {
+	display:none;
+}
+
+.meus-pedidos-detalhes #sideBar ul li,
+.meus-pedidos-detalhes #sideBar ul li a {
+	color:#000;
+	font-size:13px;
+	margin:5px 0;
+}
+
+.meus-pedidos-detalhes #sideBar ul li a:hover,
+.meus-pedidos-detalhes #ctl00_Conteudo_controleDadosPagamento_fieldsetDadosPagamento a {
+	text-decoration:underline;
+}
+
+.meus-pedidos-detalhes .descricao-entrega,
+.meus-pedidos-detalhes #ctl00_Conteudo_controleDadosPagamento_fieldsetDadosPagamento {
+	background:none repeat scroll 0 0 #E8E8E8;
+	float:left;
+	width:265px;
+	clear:both;
+	margin:0 0 10px;
+	padding:10px;
+}
+
+.meus-pedidos-detalhes .descricao-entrega h4,
+.meus-pedidos-detalhes .descricao-entrega p,
+.meus-pedidos-detalhes #ctl00_Conteudo_controleDadosPagamento_fieldsetDadosPagamento strong,
+.meus-pedidos-detalhes table.descricao-compra tbody,
+.meus-pedidos-detalhes tfoot {
+	color:#000;
+}
+
+/*********TRACKING************/
+
+.minha-conta.minha-conta-meus-pedidos.meus-pedidos.rastrear-pedido .content {
+	padding: 0;
+	background: none;
+}
+
+.rastrear-pedido .lista-informacoes-entrega {
+	background: #f07b00;
+	text-align: center;
+	width: 285px;
+	padding: 10px 0;
+	margin: 0 auto;
+}
+
+.rastrear-pedido .lista-informacoes-entrega strong {
+	color: #FFF;
+	font-size: 14px;
+	display: block;
+}
+
+.rastrear-pedido .lista-informacoes-entrega span {
+	color: #FFF;
+	font-size: 30px;
+	display: block;
+	line-height: 1;
+}
+
+.rastrear-pedido .lista-informacoes-entrega .pedido-data strong, 
+.rastrear-pedido .lista-informacoes-entrega .pedido-data span {
+	font-size: 10px!important;
+}
+
+.rastrear-pedido h3 {
+	font-size: 18px;
+	line-height: 1;
+	font-weight: bold;
+	color: #DB6500;
+	border-bottom: dotted 2px #9F9F9F;
+	margin-bottom: 20px;
+	padding: 15px 0 5px;
+	display: block;
+}
+
+.endereco-entrega.tracking {
+	font-size: 14px;
+	margin-bottom: 25px;
+}
+
+.rastrear-pedido h4 {
+	font-weight: bold;
+	color: #DB6500;
+	margin-bottom: 10px;
+}
+
+.rastrear-pedido dt {
+	float: left;
+	margin-right: 5px;
+	padding: 2px;
+}
+
+.rastrear-pedido dd {
+	padding: 2px;
+}
 
 /* ---------------- */
 /* Shipping Address */
@@ -1085,6 +1615,7 @@ table.dados-produto {
 .dados-produto td {
 	padding: 5px;
 	border: solid 1px #aeaeae;
+	text-align:center;
 }
 
 
@@ -1112,12 +1643,14 @@ table.dados-produto {
 	margin-left: -4px;
 }
 
-.content {
+.content, .minha-conta 
+.mainContentWrapper {
 	width: 930px;
 	margin: 0 auto;
 	background: url(/arquivos/content_shadow.jpg) no-repeat bottom center #EFEFEF;
 	padding: 20px;
 	padding-bottom: 40px!important;
+	float: left;
 }
 
 /* table of products - general elements */
@@ -1252,6 +1785,7 @@ tfoot td.vale-presente span {
 fieldset.vale-presente, .carrinho fieldset.cep {
 	position: relative;
 	text-align: right;
+	padding-right: 60px;
 }
 
 .carrinho .grp input.vale-presente {
@@ -1515,7 +2049,7 @@ tfoot .total .valor {
 .header-steps h1 a {
 	height: 97px;
 	width: 137px;
-	background: url(/arquivos/logo_sun_house.png)no-repeat top center;
+	background: url(/arquivos/logo_sun_house.png) no-repeat top center;
 	display: block;
 	text-indent: -99999px;
 	float: left;
@@ -1528,6 +2062,7 @@ tfoot .total .valor {
 
 #mainContent {
 	padding: 0;
+	background: none;
 }
 
 #ctl00_TopBar_ComercioTopBar_pnlTopBarAssincrono {
@@ -1542,11 +2077,13 @@ tfoot .total .valor {
 }
 
 .checkout .bts .voltar a {
-	width: 75px!important;
+    text-transform: capitalize;
+    width: 75px !important;
 }
 
 .checkout .bts .continuar input {
-	width: 135px!important;
+    padding: 5px 0;
+    width: 135px !important;
 }
 
 /*PAGAMENTO*/
@@ -1639,7 +2176,12 @@ table.valor-compra td, table.valor-compra th {
 .finaliza-compra .content h2{display:block !important;}
 .finaliza-compra .order-number{background: #f07b00;color: #FFFFFF;padding: 20px;text-align: center;width: 280px;margin: 0 auto;}
 .finaliza-compra .order-number span{font-size:18px;}
-.finaliza-compra .order-number strong{clear:both;display:block;font-size:20px;}
+.finaliza-compra .order-number strong {
+    clear: both;
+    display: block;
+    font-size: 30px;
+    line-height: 1;
+}
 .finaliza-compra #PrazoEntrega, .finaliza-compra .warning, .finaliza-compra #ctl00_Conteudo_pTextoFinalizacao{color:#f07b00;font-size: 14px;}
 .finaliza-compra #ctl00_TopBar_TopBar1_outerHeader #ctl00_BuscaTxt_Top_ctrBuscaTxt_txtBusca{display:inline !important;}
 .finaliza-compra .mainContentWrapper #ctl00_BuscaTxt_Top_ctrBuscaTxt_txtBusca{display:none;}

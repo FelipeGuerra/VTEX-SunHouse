@@ -31,6 +31,24 @@ select{padding:0;}
 a{color:#333;text-decoration:none;}
 a:hover{text-decoration:underline;}
 
+input[type="text"], input[type="password"], select, textarea {
+	border: none;
+	font-size: 12px;
+	padding: 5px;
+	box-shadow: inset 2px 2px 2px #BEBEBE;
+	width: 350px;
+}
+
+input.dia, input.mes {
+	width: 30px;
+	text-align: center;
+}
+
+input.ano {
+	width: 50px;
+	text-align: center;
+}
+
 #textContent h3{font-weight:700;margin-bottom:17px;}
 
 /* Layout */
@@ -246,6 +264,10 @@ a:hover{text-decoration:underline;}
 	margin: 45px 0 0 45px;
 }
 
+#icons_header a {
+	color: #F18300;
+}
+
 #icons_header li {
 	float: left;
 	background: url(/arquivos/sprite_icons.png) no-repeat;
@@ -303,6 +325,7 @@ a:hover{text-decoration:underline;}
 	background: none;
 	border: none;
 	float: left;
+	box-shadow: none;
 }
 
 #header #search input.btn-buscar {
@@ -1310,7 +1333,7 @@ li.activeSlide img {
 	margin-left: 35px;
 	font-size: 12px;
 }
-#sideBar .linkList a{font-size:10px;}
+
 #sideBar .sideBarItem, .navigator ul, .navigator {
 	margin-bottom: 16px;
 	padding: 20px 0;
@@ -1373,6 +1396,8 @@ li.activeSlide img {
 	clear: both;
 	margin: 3px 0 3px 0;
 	border: none;
+	padding: 2px;
+	box-shadow: none;
 }
 
 #footer_newsletter #newsletterButtonOK {
@@ -1410,6 +1435,7 @@ li.activeSlide img {
 	padding: 5px;
 	border: none;
 	font-size: 18px;
+	box-shadow: none;
 }
 
 #wrapFooterSearch fieldset select {
@@ -1621,3 +1647,137 @@ h2.titulo-sessao {
 #storeMonte a{background-position:0 -80px;height:29px;width:51px;}
 #storeLouis a{background-position:0 -120px;height:11px;width:98px;}
 #storeYves a{background-position:0 -160px;height:20px;width:99px;}
+
+/* --------- */
+/*   listas  */
+/* --------- */
+
+.listas #content {
+	width: 931px;
+	margin: 0 auto;
+	background: url(/arquivos/content_shadow.jpg) no-repeat bottom center #EFEFEF;
+	padding: 20px;
+	padding-bottom: 40px!important;
+	float: left;
+	margin-left: 7px;
+	font-size: 12px;
+}
+
+.listas #sideBar {
+	float: left;
+	width: 193px;
+	margin:0;
+}
+
+.listas #sideBar .sideBarItem {
+	margin-bottom: 16px;
+	padding: 10px;
+	background: #fff;
+}
+
+.listas #sideBar h2 {
+	font-size: 18px;
+	line-height: 1;
+	font-weight: bold;
+	color: #DB6500;
+	border-bottom: dotted 2px #9F9F9F;
+	margin-bottom: 20px;
+	padding: 5px 0 5px;
+}
+
+.listas #sideBar .linkList ul{
+	margin-bottom: 16px;
+	margin-left: 10px;
+}
+
+.listas h2.titulo-sessao {
+	font-weight: 700;
+	padding: 15px 0 5px;
+	border-bottom: dotted 2px #9F9F9F;
+	color: #DB6500;
+	font-size: 18px;
+	margin-bottom: 10px;
+	width: 715px;
+	margin-left: 210px;
+}
+
+.listas .giftlist h2 {
+	display: none;
+}
+
+.listas .giftlistsearchul span {
+	width: 110px;
+	float: left;
+	font-size: 14px;
+}
+
+.listas .giftlist {
+	float: left;
+	margin-left: 10px;
+	width: 710px;
+}
+
+.listas input[type="button"]{
+	font-size: 18px;
+	background: url('/arquivos/btn_orange.jpg');
+	min-width: 92px;
+	width: auto;
+	border: none;
+	line-height: 2;
+	color: white;
+	text-align: center;
+	padding: 0 15px;
+}
+
+.giftlist-action-create a {
+	font-size: 18px;
+	background: url('/arquivos/btn_orange.jpg');
+	min-width: 92px;
+	width: 120px;
+	border: none;
+	line-height: 2;
+	color: white;
+	text-align: center;
+	padding: 0 15px;
+	display: block;
+}
+
+.listas #content span {
+	float: left;
+	width: 110px;
+	font-size: 14px;
+	line-height: 28px;
+}
+
+.listas #content select, 
+.listas #content input {
+	margin-bottom:5px;
+}
+
+.address-list {
+	margin-bottom: 25px;
+}
+
+.giftlistisactive input {
+	margin-top: 7px;
+}
+
+#giftlistupload {
+	line-height: 2;
+	margin: 0 0 0 5px;
+}
+
+.address-list li {
+	border-right: dotted 1px #999;
+	float: left;
+	padding: 10px;
+	width: 185px;
+}
+
+.address-list li input {
+	margin-right: 5px;
+}
+
+.address-list li input, .address-list li address {
+	float: left;
+}

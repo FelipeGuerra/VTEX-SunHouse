@@ -108,6 +108,7 @@ $(document).ready(function() {
 		itensDepartamento.find('.'+linkCategoria).prependTo(itensDepartamento);
 		$('#sideBar #departmentNavigator > .menu-departamento ul').first().css('display', 'block');
 		$('#sideBar #departmentNavigator > .menu-departamento h3 span').first().addClass('active_span');
+		$('.giftlistisactive span').html('Ativar Lista?');
 	}
 	
 	/* Tabs Ambientes
