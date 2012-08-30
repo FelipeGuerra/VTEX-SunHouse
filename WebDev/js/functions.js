@@ -109,6 +109,7 @@ $(document).ready(function() {
 		$('#sideBar #departmentNavigator > .menu-departamento ul').first().css('display', 'block');
 		$('#sideBar #departmentNavigator > .menu-departamento h3 span').first().addClass('active_span');
 		$('.giftlistisactive span').html('Ativar Lista?');
+		$('.see-other-payment-method-link').html('Outras formas de pagamento');
 	}
 	
 	/* Tabs Ambientes
@@ -143,6 +144,40 @@ $(document).ready(function() {
 		
 	$('#comentariosFacebook').html('<div class="fb-comments" data-href="'+locationFaceComm+'" data-num-posts="2" data-width="900"></div>');
 	
+	/*** DESC PROD PAGE****/
+	if ($('#smartDesc .flag').length != 0 && $('#smartDesc .flag:contains("Desconto Inteligente")').length > 0){
+		var nd = $('#smartDesc .flag:contains("Desconto Inteligente")').text().split('%');
+		var dc = nd[0] * 0.01
+		var vp = $('.valor-por strong').text().split('R$');
+		var rd = vp[1].replace(",",".");
+		var di = rd * dc
+		var vcd = rd - di
+		vcd=vcd.toFixed(2);
+
+		/*if(isNaN(vcd)){
+			$('#descontoInteligente').remove();
+		};*/
+		
+		if (nd[1] == " Desconto Inteligente Boleto ou Transferencia"){
+			$('#descontoInteligente').html('<span class="discontoBoleto">ou <strong>R$'+vcd+'</strong><br />no boleto ou transfer&ecirc;ncia</span><span class="economia">Economize R$'+di+'<span class="tagDescontoInteligente">'+nd[0]+'% Desc.</span>');
+			$('#descontoInteligente').css('display', 'block');
+		}else if (nd[1] == " Desconto Inteligente Boleto"){
+			$('#descontoInteligente').html('<span class="discontoBoleto">ou <strong>R$'+vcd+'</strong><br />no boleto</span><span class="economia">Economize R$'+di+'<span class="tagDescontoInteligente">'+nd[0]+'% Desc.</span>');
+			$('#descontoInteligente').css('display', 'block');
+		}else if (nd[1] == " Desconto Inteligente Transferencia"){
+			$('#descontoInteligente').html('<span class="discontoBoleto">ou <strong>R$'+vcd+'</strong><br />na transfer&ecirc;ncia</span><span class="economia">Economize R$'+di+'<span class="tagDescontoInteligente">'+nd[0]+'% Desc.</span>');
+			$('#descontoInteligente').css('display', 'block');
+		};
+	};
+	
+	if ($('#smartDesc .flag:contains("Frete Grátis")').length > 0){
+		$('#detalhesProdutoTopo #frete_gratis').show();
+	};
+	
+	if ($('#smartDesc .flag:contains("Pronta Entrega")').length > 0){
+		$('#detalhesProdutoTopo #pronta_entrega').show();
+	};
+	
 });
 
 $(document).ajaxStop(function(){
@@ -163,4 +198,38 @@ $(document).ajaxStop(function(){
 	$('#banner_jardim_e_lazer').appendTo('ul.jardim-e-lazer');
 	$('#banner_moveis_sustentaveis').appendTo('ul.moveis-sustentaveis');
 	
+});
+
+$(document).ajaxComplete(function(event,request, settings){
+	if ($("body").attr("class") == "produto"){
+		/*Qantidade mais e menos */
+		var prodNum= parseFloat($('.productQuantity').val());
+		
+		$('.btnsQntyMais').click(function(){
+			prodNum = prodNum +1;
+			$('.productQuantity').attr('value', prodNum);
+		});
+
+		/*$('.btnsQntyMenos').click(function(){
+			while(prodNum >= 0){
+				prodNum = prodNum -1;
+				$('.productQuantity').attr('value', prodNum);
+			}
+		});*/
+				
+		$('.btnsQntyMenos').click(function(){
+			if(prodNum > 1){
+				prodNum = prodNum -1;
+				$('.productQuantity').attr('value', prodNum);
+			}else{prodNum = prodNum}
+		});
+		
+		$('#wrapProduto .buy-button').click(function() {	
+			if ($(this).attr("href") != "javascript:alert('')"){
+				var prodHref = $(this).attr("href").split("&quantidade=");
+				var qntyUrl = prodHref[0]+"&quantidade="+prodNum;
+				$(this).attr("href", qntyUrl);
+			}
+		});
+	};
 });

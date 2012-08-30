@@ -1851,7 +1851,11 @@ tfoot .total .valor-total span.valorTotal {
 
 .freteTotal {
 	position: relative;
-	left: 38px;
+	left: 14px;
+}
+
+.frete-gratis {
+    font-size: 12px;
 }
 
 tfoot .total .valor {

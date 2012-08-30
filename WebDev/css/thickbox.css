@@ -164,3 +164,70 @@ margin-top: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = d
 	margin-top:1px;
 	_margin-bottom:1px;
 }
+
+#TB_ajaxWindowTitle {
+	font-size: 20px;
+	border-bottom: dotted 2px #ccc;
+	width: 600px;
+	margin-left: 10px;
+	color: #F18300;
+}
+
+#TB_closeAjaxWindow a {
+	position: absolute;
+	top: -15px;
+	right: -15px;
+	width: 31px;
+	height: 32px;
+	background: url(/arquivos/btn_close_review.png) no-repeat top center;
+	padding: 0!important;
+	text-indent: -99999em;
+}
+
+#TB_window #div-title p {
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	padding-top: 5px;
+}
+
+#TB_window #div-title p label {
+	margin: 0!important;
+	padding: 0;
+}
+
+#TB_window fieldset legend {
+	font-weight: bold;
+	padding: 7px 0;
+}
+
+#TB_window label {
+	width: 100px;
+	float: left;
+	margin-left: 50px;
+	padding-top: 8px;
+}
+
+#TB_window input {
+	margin: 5px;
+}
+
+#TB_window #btnAdicionarAmigos {
+	display: none;
+}
+
+#TB_window textarea {
+	width: 590px;
+	resize: none;
+}
+
+#TB_window #btnCancelar, #btnEnviar {
+	font-size: 18px!important;
+	background: url('/arquivos/btn_orange.jpg');
+	width: auto;
+	border: none;
+	color: white;
+	text-align: center;
+	padding: 6px 15px;
+	text-decoration: none!important;
+}
