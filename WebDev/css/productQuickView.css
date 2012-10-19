@@ -2,21 +2,40 @@ body{
 	font-family: "Trebuchet MS", Arial, Verdana, Geneva, sans-serif;
 }
 
-#title {
+
+#TB_title, #title {
 	display: none;
 }
 
 .apresentacao {
 	float: left;
+	overflow: hidden;
+}
+
+#productQuickView #image-main {
+	width: 250px;
+	height: 250px;
 }
 
 ul.thumbs {
-	display: none;
+	margin: 0 0 0 8px;
+	list-style: none;
+	padding: 0;
+	border-top: solid 1px #ccc;
+}
+
+#quickWrapInfo {
+	float: left;
+	width: 295px;
+	margin-left: 15px;
+	border-left: solid 1px #ccc;
+	padding-left: 20px;
 }
 
 #productName {
 	font-size: 20px;
 	font-weight: bold;
+	margin-top: 15px;
 }
 
 .buy-button {
@@ -37,3 +56,113 @@ ul.thumbs {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70d32a', endColorstr='#1a8e00',GradientType=0 ); /* IE6-9 */
 
 }
+
+#productDescription {
+	float: left;
+	margin-top: 15px;
+	width: 300px;
+	clear: both;
+}
+
+.productDescriptionShort {
+	font-size: 13px;
+}
+
+#productBuy {
+	float: left;
+}
+
+.valor-de {
+	color: #999;
+}
+
+.valor-de strong {
+	text-decoration: line-through;
+}
+
+.valor-por {
+	font-size: 24px;
+}
+
+.descricao-preco {
+	margin-bottom: 0;
+}
+
+.valor-dividido .skuBestInstallmentValue {
+	font-size: 30px;
+}
+
+.economia-de {
+	font-size: 12px;
+	font-style: normal;
+}
+
+
+/* User opinion */
+#opniaoUsuarios {
+	float: left;
+	width: 100%;
+	clear: both;
+}
+
+.avaliacao {
+	padding: 20px;
+	color: #8C8C8C;
+}
+
+.media > span {
+	float: left;
+	margin-right: 5px;
+}
+
+.emptyRatingStar,
+.filledRatingStar{float:left;height:18px;width:18px;}
+
+.filledRatingStar{background-position:0 -20px;}
+
+#productRating {
+	float: left;
+	clear: both;
+	width: 300px;
+}
+
+#productRating strong {
+	font-size: 11px;
+	float: left;
+}
+
+.rating-produto, .rating-demonstrativo, .rating-wrapper .rating {
+	height: 18px;
+	width: 87px;
+	float: left;
+}
+
+.ratingStar,
+.rating-produto,
+.rating-demonstrativo,
+.rating-wrapper div{background-image:url("/arquivos/sprite-stars.png");background-repeat:no-repeat;display:block;text-indent:-999em;}
+
+.a05,
+.a10,
+.avaliacao05,
+.avaliacao10{background-position:0 -20px;}
+
+.a15,
+.a20,
+.avaliacao15,
+.avaliacao20{background-position:0 -40px;}
+
+.a25,
+.a30,
+.avaliacao25,
+.avaliacao30{background-position:0 -60px;}
+
+.a35,
+.a40,
+.avaliacao35,
+.avaliacao40{background-position:0 -80px;}
+
+.a45,
+.a50,
+.avaliacao45,
+.avaliacao50{background-position:0 -100px;}

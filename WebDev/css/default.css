@@ -54,8 +54,10 @@ a:hover{text-decoration:underline;}
 /* Top Bar */
 #topBar {
 	line-height: 2;
-	position: absolute;
 	right: 0;
+	clear: both;
+	float: left;
+	width: 100%;
 }
 #topBar div {
 	overflow: auto;
@@ -89,8 +91,7 @@ a:hover{text-decoration:underline;}
 	margin-left: 0;
 	float: left;
 	overflow: hidden;
-	padding:0;
-}
+	padding:0;}
 
 #divMenuWelcome {
 	width:430px;
@@ -218,7 +219,7 @@ a:hover{text-decoration:underline;}
 #header #search {
 	position: absolute;
 	right: 0;
-	top: 70px;
+	bottom: 0;
 	background: url(/arquivos/bg_busca.png) no-repeat top center;
 	width: 339px;
 	height: 27px;
@@ -499,10 +500,19 @@ a:hover{text-decoration:underline;}
 	width: 230px;
 }
 
+#wrap_bottom_footer #bottom_footer div#parceirsos {
+	width: 155px;
+}
+
 #bottom_footer {
 	width: 970px;
 	margin: 0 auto;
 	padding: 25px 0 0 0;
+}
+
+#wrap_bottom_footer #bottom_footer div#formas_de_pagamento {
+	margin-right: 5px;
+	width: 380px;
 }
 
 #bottom_footer div {
@@ -510,10 +520,15 @@ a:hover{text-decoration:underline;}
 	background: none;
 }
 
+#wrap_bottom_footer #bottom_footer div#redes_sociais {
+	width: 175px;
+	margin-left: 20px;
+}
+
 #wrap_bottom_footer #bottom_footer div #bandeiras {
-	background: url('/arquivos/sprite_icons.png') no-repeat -14px -213px;
-	width: 189px;
-	height: 93px;
+	background: url('/arquivos/sprite_icons.png') no-repeat 0 -545px;
+	width: 360px;
+	height: 65px;
 	margin-top: 10px;
 	position: static;
 }
@@ -559,8 +574,8 @@ a:hover{text-decoration:underline;}
 }
 
 #wrap_bottom_footer #seguranca_garantida #selos {
-	background: url('/arquivos/sprite_icons.png') no-repeat -227px -282px;
-	width: 199px;
+	background: url('/arquivos/sprite_icons.png') no-repeat -228px -280px;
+	width: 185px;
 	height: 101px;
 	margin-top: 10px;
 }
@@ -841,7 +856,7 @@ a:hover{text-decoration:underline;}
 }
 
 .login label {
-	width: 115px;
+	width: 174px;
 	float: left;
 	clear: both;
 }
@@ -885,6 +900,7 @@ a:hover{text-decoration:underline;}
 	height: 90px;
 	float: left;
 	padding-left: 60px;
+	margin-bottom: 5px;
 }
 
 #wrapVantegens div h3 {
@@ -898,7 +914,7 @@ a:hover{text-decoration:underline;}
 }
 
 #acompanhe_a_compra {
-	margin-bottom: 5px;
+	margin-bottom: 140px;
 	background: url('/arquivos/sprite_legado.png') no-repeat -3px -170px #fff;
 }
 
@@ -916,7 +932,7 @@ a:hover{text-decoration:underline;}
 .register-info .vantagens li{margin-bottom:4px;}
 
 .minha-conta .outras-opcoes ul{margin-top:8px;}
-.minha-conta .outras-opcoes a{background:none;clear:both;color:#000;display:block;font-size: 12px;float:left;text-decoration:underline!important;line-height:16px;}
+.minha-conta .outras-opcoes a{background:none;clear:both;color:#000;display:block;font-size: 12px!important;float:left;text-decoration:underline!important;line-height:16px;}
 
 
 /* ------- */
@@ -1187,6 +1203,11 @@ li.listas {
 #orderInfoProductList .links{text-align:center;}
 #orderInfoProductList a{text-decoration:underline;}
 
+#orderInfoProductList a.detalhes {
+	background: url('/arquivos/btn_orange.jpg');
+	padding: 0 10px;
+	text-decoration: none;
+}
 
 /*******//*MDETALHES DO PEDIDO*/ /********/
 
@@ -1653,6 +1674,8 @@ table.dados-produto {
 	float: left;
 }
 
+.mainContentWrapper #banner_destques{display:none;}
+
 /* table of products - general elements */
 .carrinho .content .bt{width:auto;}
 .carrinhoTable {
@@ -2036,9 +2059,9 @@ tfoot .total .valor {
     color:#ff0000;
 }
 
-#bandeiras {
-	width: 522px;
-	height: 117px;
+#bandeirasCarrinho {
+	width: 588px;
+	height: 114px;
 	background: url(/arquivos/bandeiras_carrinho.jpg) no-repeat top center;
 	position: absolute;
 	left: 30px;
@@ -2207,4 +2230,10 @@ table.valor-compra td, table.valor-compra th {
 	line-height: 0;
 	font-size: 0;
 	text-indent: -99999px;
+}
+
+#TB_iframeContent {
+	width: 500px;
+	height: 300px;
+	margin-top: -90px;
 }

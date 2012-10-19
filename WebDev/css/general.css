@@ -28,6 +28,16 @@ textarea{border:1px solid #999;font-size:10px;padding:1px 2px;}
 
 select{padding:0;}
 
+#ajaxBusy p {
+	display: block;
+	padding: 5px 10px;
+	margin-left: 50px;
+	background: #E77000;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 0 0 5px 5px;
+}
+
 .orderBy select {
 	border: solid 1px #bcbcbc;
 	padding: 0;
@@ -260,7 +270,7 @@ input.ano {
 	float: left;
 	height: 97px;
 	width: 137px;
-	background: url(/arquivos/logo_sun_house.png)no-repeat top center;
+	background: url(/arquivos/logo_sun_house.png) no-repeat top center;
 }
 
 #icons_header {
@@ -485,10 +495,11 @@ input.ano {
 }
 
 #menu .menu-departamento ul li ul li {
-	float: none;
+	float: left;
 	border: none;
 	padding: 0;
 	margin: 0 10px;
+	width: 100%;
 }
 
 #menu #linkVipClub{color:#ededed;float:right;padding-left:8px;padding-right:11px;}
@@ -702,17 +713,17 @@ input.ano {
 	display: block;
 	position: absolute;
 	top: 6px;
-	right: 400px;
+	right: 380px;
 }
 
 #wrap_vitrine_title h3 p {
-	font-size: 15px;
+	font-size: 14px;
 	position: absolute;
 	clear: none;
 	top: 12px;
 	right: 0;
-	background: url('/arquivos/sprite_icons.png') no-repeat -393px -437px;
-	padding-right: 45px;
+	background: url('/arquivos/sprite_icons.png') no-repeat -410px -440px;
+	padding-right: 40px;
 }
 
 .wrap_vitrine_home.ambientes {
@@ -898,7 +909,7 @@ h1 {
 	font-size: 16px;
 	color: #333;
 	font-weight: bold;
-	padding-top: 15px;
+	padding: 0 16px;
 	display: block;
 	line-height: 1;
 }
@@ -1386,11 +1397,17 @@ li.activeSlide img {
 	width: 330px;
 	font-size: 22px;
 	line-height: 1;
-	padding: 10px 20px 0 10px;
+	padding: 5px 20px 0 10px;
 }
 
 #footer_newsletter > p span{
 	color: #db6500;
+}
+#footer_newsletter > p span.clausula {
+	font-size: 11px;
+	position: absolute;
+	bottom: 5px;
+	left: 10px;
 }
 
 #footer_newsletter fieldset p, #footer_newsletter .newsletter-title {
@@ -1560,20 +1577,36 @@ li.activeSlide img {
 	padding: 25px 0 0 0;
 }
 
+#wrap_bottom_footer #bottom_footer div#formas_de_pagamento {
+	margin-right: 5px;
+	width: 380px;
+}
+
 #bottom_footer div {
 	float: left;
+	background: none;
+}
+
+#wrap_bottom_footer #bottom_footer div#redes_sociais {
+	width: 175px;
+	margin-left: 20px;
 }
 
 #wrap_bottom_footer #bottom_footer div #bandeiras {
-	background: url('/arquivos/sprite_icons.png') no-repeat -14px -210px;
-	width: 205px;
-	height: 93px;
+	background: url('/arquivos/sprite_icons.png') no-repeat 0 -545px;
+	width: 360px;
+	height: 65px;
 	margin-top: 10px;
+	position: static;
 }
 
 #wrap_bottom_footer #bottom_footer #redes div {
 	width: auto;
 	margin: 10px 5px 0 0;
+}
+
+#wrap_bottom_footer #bottom_footer #redes div#youtube {
+	clear: left;
 }
 
 #wrap_bottom_footer #redes_sociais #facebook a {
@@ -1613,7 +1646,7 @@ li.activeSlide img {
 
 #wrap_bottom_footer #seguranca_garantida #selos {
 	background: url('/arquivos/sprite_icons.png') no-repeat -227px -282px;
-	width: 199px;
+	width: 190px;
 	height: 101px;
 	margin-top: 10px;
 }
@@ -1732,7 +1765,7 @@ h2.titulo-sessao {
 .listas .giftlist {
 	float: left;
 	margin-left: 10px;
-	width: 710px;
+	width: 720px;
 }
 
 .listas input[type="button"]{
@@ -1745,6 +1778,8 @@ h2.titulo-sessao {
 	color: white;
 	text-align: center;
 	padding: 0 15px;
+	cursor: pointer;
+
 }
 
 .giftlist-action-create a {
@@ -1769,33 +1804,214 @@ h2.titulo-sessao {
 
 .listas #content select, 
 .listas #content input {
-	margin-bottom:5px;
+	margin-bottom: 5px;
 }
 
-.address-list {
+.listas .giftlistphotoview {
+	width: 200px;
+	height: 200px;
+	padding: 5px;
+	position: absolute;
+	top: 70px;
+	right: 30px;
+	border: solid 1px #ccc;
+}
+
+.listas .giftlistphotoview img {
+	width: 200px;
+	height: 200px;
+}
+
+.listas #content #giftlistremovephoto {
+	background: none;
+	font-size: 12px;
+	color: #333;
+	position: relative;
+	left: 49px;
+	cursor: pointer;
+}
+
+.listas #content #giftlistremovephoto:hover{text-decoration:underline;}
+
+.listas .address-list {
 	margin-bottom: 25px;
 }
 
-.giftlistisactive input {
+.listas .giftlistisactive input {
 	margin-top: 7px;
 }
 
-#giftlistupload {
+.listas #giftlistupload {
 	line-height: 2;
 	margin: 0 0 0 5px;
 }
 
-.address-list li {
+.listas .address-list li {
 	border-right: dotted 1px #999;
 	float: left;
 	padding: 10px;
 	width: 185px;
+	cursor: pointer;
 }
 
-.address-list li input {
+.listas .address-list li input {
 	margin-right: 5px;
 }
 
-.address-list li input, .address-list li address {
+.listas .address-list li input, .address-list li address {
 	float: left;
 }
+
+.listas .giftlist-table {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.listas .giftlist-table thead th {
+	background: #fff;
+	font-weight: bold;
+}
+
+.listas .giftlist-table th, .giftlist-table td {
+	padding: 7px;
+	text-align: center;
+	border-bottom: solid 1px #ccc;
+}
+
+.listas .giftlistimage {
+	width: 200px;
+	height: 200px;
+	margin-left: 20px;
+	padding: 5px;
+	border: solid 1px #ccc;
+	float: left;
+}
+
+.listas .giftlistdetails {
+	float: left;
+	margin-left: 20px;
+	width: 300px;
+}
+
+.listas .prateleira {
+	float: left;
+	clear: both;
+	width: 100%;
+	margin: 10px 0;
+}
+
+.listas .desc {
+	display: none;
+}
+
+.listas .amount-in-cart {
+	display: none;
+}
+
+.listas .prateleira fieldset {
+	display: none;
+}
+
+.listas .prateleira h3 {
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+	padding-top: 15px;
+	display: block;
+	line-height: 1;
+}
+
+.listas .prateleira li {
+	margin-right: 25px;
+	float: left;
+	width: 210px;
+	text-align: center;
+}
+
+.listas .photo {
+	background: #fff;
+	padding: 20px 0;
+	margin: 10px 0;
+}
+
+.listas .prateleira li .valor-de {
+	color: #999;
+	text-decoration: line-through;
+}
+
+.listas #content .prateleira li .add {
+	width: 100%;
+	margin: 10px 0;
+}
+
+.listas #content .prateleira li .add a {
+	background: url(/arquivos/btn_green.png);
+	display: block;
+	color: #fff;
+	padding: 6px 0;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.listas .giftlistsku-table {
+	float: left;
+	clear: both;
+	width: 100%;
+	margin: 20px 00;
+}
+
+.listas .giftlist-credit {
+	margin-top: 30px;
+}
+
+.listas .giftlistsku-table thead th, .giftlistsku-table tbody td {
+	border-bottom: solid 1px #ccc;
+	text-align: center;
+}
+
+.listas .giftlistsku-table thead th {
+	background: #fff;
+	font-size: 14px;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.listas .giftlistsku-table tbody td {
+	padding: 10px;
+}
+
+.listas .giftlist-remove-sku {
+	float: left;
+	width: 100%;
+}
+
+.listas .giftlist-remove-sku .help {
+	display: none;
+}
+
+.listas .giftlist-remove-sku #giftlistremovesku {
+	float: right;
+}
+
+/**** PUPUPS ****/
+
+.popup .header h1 {padding:0;margin:0;}
+.popup .header h1 a {
+	height: 97px;
+	width: 137px;
+	display:block;
+	background: url(/arquivos/logo_sun_house.png) no-repeat top center;
+	text-indent:-99999px;
+	float:left
+}
+
+.popup .header h2 {float:left;clear:right;font-size:20px;margin:50px 0 0 20px}
+
+.popup .header .close{position:absolute;top:10px;right:10px;text-decoration:underline;}
+
+.popup .content {float:left;clear:both;margin-top:20px}
+
+.popup #banner_destques {display: none;}
+.popup .contentWrapper {padding: 20px;}
+
+.popup .footer .close{display:none;}

@@ -90,6 +90,14 @@ ul.rating,
 #imagemProduto #image {
 	background: url(/arquivos/shadow_produto_principal.png) no-repeat bottom left;
 	padding-bottom: 12px;
+	width: 495px;
+	height: 499px;
+}
+
+#imagemProduto #image #image-main {
+	background: #fff;
+	width: 495px;
+	height: 495px;
 }
 
 .thumbs{margin-top:10px;overflow:auto;}
@@ -169,11 +177,11 @@ ul.rating,
 }
 
 .notifyme-form input[type="text"] {
-	background: url('/arquivos/sprite_icons.png') no-repeat -440px -342px;
 	border: none;
 	padding: 5px;
 	font-size: 12px;
-	margin-right: 5px;
+	margin: 5px;
+	width: 200px;
 }
 
 .notifyme-form input[name="notifymeButtonOK"] {
@@ -411,7 +419,7 @@ ul.rating,
 
 .saibamaisShipping {
 	position: relative;
-	left: 230px;
+	left: 110px;
 	font-size: 12px;
 	color: #ff9831;
 	text-decoration: underline;

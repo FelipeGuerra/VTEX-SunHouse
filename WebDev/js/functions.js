@@ -182,6 +182,11 @@ $(document).ready(function() {
 
 $(document).ajaxStop(function(){
 	
+	if ($('div.notifyme').css('display') === 'block') {
+		$('#quantidadeProd').css('display', 'none');
+		$('#pagamentoCartoes').css('display', 'none');
+	}
+	
 	/** Pager Bottom Center **/
 	var pagerBottomWidth = $('.pager.bottom').width()
 	$('.pager.bottom').css('margin-left', (pagerBottomWidth/2)*-1);
