@@ -70,6 +70,11 @@
 });
 
 $(document).ajaxStop(function(){
+	$('#ctl00_Conteudo_ctrlCadastroCliente_txtRazaoSocial').attr('max-length', '50');
+	$('#ctl00_Conteudo_ctrlCadastroCliente_txtNomeFantasia').attr('max-length', '20');
+	$('#ctl00_Conteudo_ctrlCadastroCliente_txtNome').attr('max-length', '50');
+	$('#ctl00_Conteudo_ctrlCadastroCliente_txtSobrenome').attr('max-length', '50');
+	$('#ctl00_Conteudo_ctrlCadastroCliente_txtApelido').attr('max-length', '35');
 
 	$('.welcome').prependTo('#topBar > div');
 	$('#LoginWrapper').insertAfter('#topBar .welcome');
